@@ -57,6 +57,20 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'Marginalia',
+      link: { type: 'doc', id: 'marginalia/overview' },
+      items: [
+        'marginalia/getting-started',
+        'marginalia/configuration',
+        {
+          type: 'category',
+          label: 'Advanced',
+          items: ['marginalia/advanced/theming'],
+        },
+      ],
+    },
+    {
+      type: 'category',
       label: 'New post toast',
       link: { type: 'doc', id: 'new-post-toast/overview' },
       items: [
