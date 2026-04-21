@@ -1,0 +1,50 @@
+{
+  "title": "Glossary",
+  "description": "Terms used across the plugin documentation.",
+  "terms": [
+    {
+      "term": "MDX",
+      "definition": "A Markdown-based format that lets you write JSX inside your markdown, used by Docusaurus v3 for docs and pages.",
+      "relatedTerms": ["remark"]
+    },
+    {
+      "term": "remark",
+      "definition": "A markdown processor. Remark plugins transform the markdown AST before it becomes HTML/JSX.",
+      "relatedTerms": ["MDX"]
+    },
+    {
+      "term": "rehype",
+      "definition": "An HTML processor. Rehype plugins transform the HTML AST after markdown has been compiled.",
+      "relatedTerms": ["remark"]
+    },
+    {
+      "term": "swizzle",
+      "definition": "Docusaurus's mechanism for customizing theme components by ejecting or wrapping them in your project.",
+      "relatedTerms": ["theme"]
+    },
+    {
+      "term": "client module",
+      "definition": "A JS/TS file registered via a plugin's getClientModules() that runs on every client-side navigation in the browser.",
+      "relatedTerms": ["lifecycle hook"]
+    },
+    {
+      "term": "lifecycle hook",
+      "definition": "One of Docusaurus's plugin API methods (loadContent, contentLoaded, postBuild, …) invoked during the build.",
+      "relatedTerms": ["client module"]
+    },
+    {
+      "term": "GDPR",
+      "abbreviation": "General Data Protection Regulation",
+      "definition": "EU data-protection regulation that requires explicit consent before setting non-essential cookies or tracking users."
+    },
+    {
+      "term": "localStorage",
+      "definition": "A browser API for persisting small amounts of string data per-origin across sessions.",
+      "relatedTerms": ["client module"]
+    },
+    {
+      "term": "Statuspage",
+      "definition": "Atlassian's hosted status-page product with a public JSON API for incidents and component statuses."
+    }
+  ]
+}

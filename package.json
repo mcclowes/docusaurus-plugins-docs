@@ -1,0 +1,67 @@
+{
+  "name": "docusaurus-plugins-docs",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Documentation site for a family of Docusaurus plugins — and a live demo of all of them.",
+  "scripts": {
+    "docusaurus": "docusaurus",
+    "start": "docusaurus start",
+    "build": "docusaurus build",
+    "swizzle": "docusaurus swizzle",
+    "deploy": "docusaurus deploy",
+    "clear": "docusaurus clear",
+    "serve": "docusaurus serve",
+    "write-translations": "docusaurus write-translations",
+    "write-heading-ids": "docusaurus write-heading-ids",
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "lint": "eslint .",
+    "postinstall": "node scripts/patch-plugin-cjs.mjs"
+  },
+  "dependencies": {
+    "@docusaurus/core": "^3.5.0",
+    "@docusaurus/preset-classic": "^3.5.0",
+    "@mdx-js/react": "^3.0.0",
+    "clsx": "^2.1.0",
+    "docusaurus-plugin-banner": "^0.4.0",
+    "docusaurus-plugin-cookie-consent": "^4.5.0",
+    "docusaurus-plugin-glossary": "^3.2.0",
+    "docusaurus-plugin-new-post-toast": "file:./vendor/docusaurus-plugin-new-post-toast-0.2.0.tgz",
+    "docusaurus-plugin-starter": "file:./vendor/docusaurus-plugin-starter-0.2.0.tgz",
+    "docusaurus-plugin-statuspage": "^0.1.0",
+    "prism-react-renderer": "^2.3.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@docusaurus/module-type-aliases": "^3.5.0",
+    "@docusaurus/tsconfig": "^3.5.0",
+    "@docusaurus/types": "^3.5.0",
+    "@typescript-eslint/eslint-plugin": "^7.18.0",
+    "@typescript-eslint/parser": "^7.18.0",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-react": "^7.35.0",
+    "prettier": "^3.3.0",
+    "typescript": "~5.5.0"
+  },
+  "browserslist": {
+    "production": [
+      ">0.5%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 3 chrome version",
+      "last 3 firefox version",
+      "last 5 safari version"
+    ]
+  },
+  "engines": {
+    "node": ">=18.0"
+  },
+  "overrides": {
+    "webpack": "5.105.4"
+  }
+}
