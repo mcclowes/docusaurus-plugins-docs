@@ -85,6 +85,20 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'omg',
+      link: { type: 'doc', id: 'omg/overview' },
+      items: [
+        'omg/getting-started',
+        'omg/configuration',
+        {
+          type: 'category',
+          label: 'Advanced',
+          items: ['omg/advanced/freshness'],
+        },
+      ],
+    },
+    {
+      type: 'category',
       label: 'Starter',
       link: { type: 'doc', id: 'starter/overview' },
       items: [
