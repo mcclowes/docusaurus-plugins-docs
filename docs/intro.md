@@ -16,7 +16,9 @@ This site documents — and dogfoods — a family of Docusaurus v3 plugins. Ever
 | [**Banner**](./banner/overview.md)                 | Dismissable announcement banner at the top of every page, with localStorage persistence.                            |
 | [**Cookie consent**](./cookie-consent/overview.md) | GDPR-style consent modal/toast with Google Consent Mode v2 integration and a React hook for gated scripts.          |
 | [**Glossary**](./glossary/overview.md)             | Auto-generated glossary page, a `GlossaryTerm` component, and a remark plugin that auto-links terms in markdown.    |
+| [**Marginalia**](./marginalia/overview.md)         | Editorial sidenotes: inline anchors paired with cards that pack top-down in the right margin and highlight on scroll.|
 | [**New post toast**](./new-post-toast/overview.md) | Toast notifications for new blog posts since the user's last visit — purely client-side.                            |
+| [**omg**](./omg/overview.md)                       | Build-time OMG → OpenAPI 3.1 compiler that reads markdown-defined APIs and writes a spec to `static/`.              |
 | [**Starter**](./starter/overview.md)               | A lean template for building your own Docusaurus plugin: lifecycle hooks, client modules, remark, theme, and tests. |
 | [**Statuspage**](./statuspage/overview.md)         | Discreet banner that surfaces ongoing incidents from a public Statuspage.io instance.                               |
 

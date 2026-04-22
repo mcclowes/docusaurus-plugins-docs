@@ -4,7 +4,7 @@ Guidance for Claude Code when working in this repository.
 
 ## Project
 
-`docusaurus-plugins-docs` — a Docusaurus v3 documentation site for a family of Docusaurus plugins. The site installs and demos every plugin it documents, so docs and live behaviour stay in sync.
+`docusaurus-plugins-docs` — a Docusaurus v3 documentation site for a family of Docusaurus plugins. The site installs and demos most plugins it documents, so docs and live behaviour stay in sync. Exceptions (`starter`, `marginalia`) are called out below.
 
 - Entry: `docusaurus.config.ts`
 - Content: `docs/` (per-plugin nested structure), `blog/`, `src/pages/`
@@ -20,7 +20,9 @@ Each is a standalone npm package (not a workspace):
 | —                     | `docusaurus-plugin-banner`         | `/docs/banner/*`         |
 | —                     | `docusaurus-plugin-cookie-consent` | `/docs/cookie-consent/*` |
 | —                     | `docusaurus-plugin-glossary`       | `/docs/glossary/*`       |
+| —                     | `docusaurus-plugin-marginalia`     | `/docs/marginalia/*`     |
 | —                     | `docusaurus-plugin-new-post-toast` | `/docs/new-post-toast/*` |
+| —                     | `docusaurus-plugin-omg`            | `/docs/omg/*`            |
 | —                     | `docusaurus-plugin-starter`        | `/docs/starter/*`        |
 | —                     | `docusaurus-plugin-statuspage`     | `/docs/statuspage/*`     |
 
@@ -67,6 +69,8 @@ The installed plugins have a few published-package bugs the docs site has to wor
 Root fixes belong in the plugin repos. If a plugin publishes a release with the fix landed, trim that case out of the patch script. `package.json` also pins `webpack: 5.105.4` via `overrides` — webpack 5.106 regressed `ProgressPlugin`'s schema validation in a way that breaks `webpackbar@6.0.1`.
 
 `docusaurus-plugin-starter` is intentionally **not** registered in `docusaurus.config.ts`. It's a template for building new plugins, not a library — its demo route has SSR issues when consumed from a sibling site because it's meant to be forked.
+
+`docusaurus-plugin-marginalia` is currently **documented but not installed**. The plugin exists as a sibling repo (`~/Development/docusaurus/docusaurus-plugin-marginalia`) but isn't yet published to npm. Its docs (`docs/marginalia/*`) and sidebar entry are in place so the install step is a small PR away; don't remove them. Once published, add it to `package.json` and register it in `docusaurus.config.ts` alongside the other plugins.
 
 ## Out of scope
 
