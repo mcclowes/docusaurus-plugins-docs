@@ -57,6 +57,20 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'Marginalia',
+      link: { type: 'doc', id: 'marginalia/overview' },
+      items: [
+        'marginalia/getting-started',
+        'marginalia/configuration',
+        {
+          type: 'category',
+          label: 'Advanced',
+          items: ['marginalia/advanced/theming'],
+        },
+      ],
+    },
+    {
+      type: 'category',
       label: 'New post toast',
       link: { type: 'doc', id: 'new-post-toast/overview' },
       items: [
@@ -66,6 +80,20 @@ const sidebars: SidebarsConfig = {
           type: 'category',
           label: 'Advanced',
           items: ['new-post-toast/advanced/multiple-blogs', 'new-post-toast/advanced/storage'],
+        },
+      ],
+    },
+    {
+      type: 'category',
+      label: 'omg',
+      link: { type: 'doc', id: 'omg/overview' },
+      items: [
+        'omg/getting-started',
+        'omg/configuration',
+        {
+          type: 'category',
+          label: 'Advanced',
+          items: ['omg/advanced/freshness'],
         },
       ],
     },
