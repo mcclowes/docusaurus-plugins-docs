@@ -80,6 +80,16 @@ const config: Config = {
     // route has SSR issues in this consume-only setup (expected — you're meant
     // to fork it, not install it). We document it but don't register it here.
 
+    // OMG → OpenAPI 3.1 compiler. Reads `api/todo/api.omg.md` (and the rest of
+    // `api/todo/`) at build time and writes the spec to `static/api/todo.yaml`,
+    // which the site then serves at `/api/todo.yaml`.
+    [
+      'docusaurus-plugin-omg',
+      {
+        apis: [{ id: 'todo', input: 'api/todo/api.omg.md' }],
+      },
+    ],
+
     // Discreet Statuspage.io banner on outages. Swap in your real statuspage URL.
     [
       'docusaurus-plugin-statuspage',
@@ -125,6 +135,7 @@ const config: Config = {
             { label: 'Cookie consent', to: '/docs/cookie-consent/overview' },
             { label: 'Glossary', to: '/docs/glossary/overview' },
             { label: 'New post toast', to: '/docs/new-post-toast/overview' },
+            { label: 'omg', to: '/docs/omg/overview' },
             { label: 'Starter', to: '/docs/starter/overview' },
             { label: 'Statuspage', to: '/docs/statuspage/overview' },
           ],

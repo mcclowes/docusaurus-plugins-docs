@@ -7,45 +7,86 @@ title: Configuration
 
 ## Plugin options
 
-| Option      | Type                       | Default                 | Notes                                              |
-| ----------- | -------------------------- | ----------------------- | -------------------------------------------------- |
-| `addresses` | `string[]`                 | `[]`                    | omg.lol addresses to fetch latest status + weblog  |
-| `pastes`    | `{ address, paste }[]`     | `[]`                    | Specific pastes to fetch                           |
-| `apiBase`   | `string`                   | `https://api.omg.lol`   | Override for testing or self-hosted forks          |
+| Option      | Type               | Default        | Notes                                                        |
+| ----------- | ------------------ | -------------- | ------------------------------------------------------------ |
+| `apis`      | `OmgApiInput[]`    | `[]`           | APIs to compile. Each entry produces one output file.        |
+| `outputDir` | `string`           | `'static/api'` | Default directory for compiled specs, relative to site root. |
+| `format`    | `'yaml' \| 'json'` | `'yaml'`       | Default output format for APIs that don't override it.       |
 
-The plugin pre-fetches at build time, so it needs to know what to retrieve before MDX is parsed. Anything not listed in `addresses` or `pastes` will render an empty-state placeholder.
+With the default `outputDir` of `static/api`, compiled specs land in your site's `static/` directory — Docusaurus then serves them at `/api/<id>.yaml` (or `.json`).
 
-## Components
+## `OmgApiInput`
 
-All three components are registered as Docusaurus theme components and importable from `@theme/<Name>` in any `.md` / `.mdx` file.
+| Field    | Type               | Default                     | Notes                                                                                         |
+| -------- | ------------------ | --------------------------- | --------------------------------------------------------------------------------------------- |
+| `id`     | `string`           | —                           | Required. Used as the compiled filename when `output` is not set; also surfaced in log lines. |
+| `input`  | `string`           | —                           | Required. Path to the **root** `.omg.md` file, relative to the Docusaurus site root.          |
+| `output` | `string`           | `<outputDir>/<id>.<format>` | Output path, relative to the site root.                                                       |
+| `format` | `'yaml' \| 'json'` | plugin-level `format`       | Overrides the default for this API only.                                                      |
 
-### `<OmgStatus address="..." />`
+## Examples
 
-Renders the most recent status from the address's statuslog. Output includes emoji, content, author handle (linking to the omg.lol profile), and a relative timestamp linking to the canonical status URL.
+### Single API with defaults
 
-| Prop      | Type     | Required | Notes                                       |
-| --------- | -------- | -------- | ------------------------------------------- |
-| `address` | `string` | yes      | Must be listed in plugin's `addresses`      |
+```ts
+{
+  apis: [{ id: 'todo', input: 'api/todo/api.omg.md' }],
+}
+// Output: static/api/todo.yaml → served at /api/todo.yaml
+```
 
-### `<OmgWeblogLatest address="..." showContent={false} />`
+### Multiple APIs with mixed formats
 
-Renders the latest weblog post: title (linking to the post), byline, formatted date, and description.
+```ts
+{
+  apis: [
+    { id: 'todo', input: 'api/todo/api.omg.md' },
+    { id: 'billing', input: 'api/billing/api.omg.md', format: 'json' },
+  ],
+}
+// Output:
+//   static/api/todo.yaml     → /api/todo.yaml
+//   static/api/billing.json  → /api/billing.json
+```
 
-| Prop          | Type      | Required | Notes                                                |
-| ------------- | --------- | -------- | ---------------------------------------------------- |
-| `address`     | `string`  | yes      | Must be listed in plugin's `addresses`               |
-| `showContent` | `boolean` | no       | If true, also renders the full post body (raw text)  |
+### Custom output path
 
-### `<OmgPaste address="..." paste="..." language="..." />`
+Useful when you want the spec colocated with documentation rather than in `static/`:
 
-Renders a paste as a `<pre><code>` block.
+```ts
+{
+  apis: [
+    {
+      id: 'todo',
+      input: 'api/todo/api.omg.md',
+      output: 'docs/reference/todo.openapi.yaml',
+    },
+  ],
+}
+```
 
-| Prop       | Type     | Required | Notes                                                          |
-| ---------- | -------- | -------- | -------------------------------------------------------------- |
-| `address`  | `string` | yes      | Must be combined with `paste` in plugin's `pastes` option      |
-| `paste`    | `string` | yes      | Paste slug                                                     |
-| `language` | `string` | no       | Adds `language-{x}` class for Prism syntax highlighting        |
+### Project-wide default format
 
-## Empty states
+```ts
+{
+  format: 'json',
+  apis: [
+    { id: 'todo', input: 'api/todo/api.omg.md' },     // → todo.json
+    { id: 'billing', input: 'api/billing/api.omg.md' }, // → billing.json
+  ],
+}
+```
 
-Each component renders a small dashed-border placeholder if the requested content isn't in the build snapshot — for example, an address you forgot to declare, or a paste that 404s. This keeps your page from breaking in build but flags the issue visibly in dev.
+## Watch mode
+
+During `docusaurus start` the plugin reports the parent directory of each `input` via `getPathsToWatch()`, so edits to any `.omg.md` file under that directory trigger a hot rebuild.
+
+## Build-time errors
+
+Parse or compile failures fail the build with a message identifying the offending api id, e.g.:
+
+```
+[docusaurus-plugin-omg] failed to parse api "todo" from /…/api/todo/api.omg.md: <details>
+```
+
+This is intentional — a broken spec should not silently produce a broken site.

@@ -93,7 +93,7 @@ const sidebars: SidebarsConfig = {
         {
           type: 'category',
           label: 'Advanced',
-          items: ['omg/advanced/freshness'],
+          items: ['omg/advanced/source-layout', 'omg/advanced/renderers'],
         },
       ],
     },

@@ -8,6 +8,9 @@ build
 .docusaurus
 .cache-loader
 
+# Compiled OMG specs (regenerated on every build by docusaurus-plugin-omg)
+static/api
+
 # Environment
 .env
 .env.local
