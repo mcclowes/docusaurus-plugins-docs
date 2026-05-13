@@ -69,7 +69,6 @@ Returns all todos.
   completed: boolean
 }]
 ```
-```
 
 Run `npm start` — the plugin compiles on the fly, and `/api/todo.yaml` updates as you save.
 

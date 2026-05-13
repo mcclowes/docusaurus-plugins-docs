@@ -13,7 +13,7 @@ Guidance for Claude Code when working in this repository.
 
 ## Plugins documented here
 
-Each is a standalone npm package (not a workspace):
+Each is a standalone npm package (not a workspace). Most install from the npm registry; `new-post-toast` and `starter` install from local tarballs in `vendor/` (see `package.json` — `file:./vendor/*.tgz`) because the published versions need the workarounds documented below:
 
 | Directory (this repo) | Package                            | Docs route               |
 | --------------------- | ---------------------------------- | ------------------------ |
@@ -62,7 +62,7 @@ Use GitHub issues for new work. Reference with `Fixes #N` / `Closes #N` in PRs.
 
 The installed plugins have a few published-package bugs the docs site has to work around. `scripts/patch-plugin-cjs.mjs` runs on `postinstall` and:
 
-1. Fixes the tsup-generated CJS bug in `docusaurus-plugin-glossary` and `docusaurus-plugin-new-post-toast` where `var import_meta = {}` causes `fileURLToPath(undefined)`. Also patches the same pattern in `docusaurus-plugin-starter` (harmlessly — already uses `__filename`/`__dirname` names).
+1. Fixes the tsup-generated CJS bug where `var import_meta = {}; var x = fileURLToPath(import_meta.url)` throws `fileURLToPath(undefined)` under Docusaurus's jiti CJS loader. The script walks every `.cjs` under `dist/` for `docusaurus-plugin-{glossary,new-post-toast,starter,banner,cookie-consent,statuspage}` and rewrites matches to use the CJS-provided `__filename`/`__dirname`. Idempotent — packages without the pattern are left alone, so it's safe to keep all six in the list as the published builds shift.
 2. Neutralises `docusaurus-plugin-new-post-toast`'s `validateOptions` export. The plugin's `validateOptions` returns `{valid,errors,warnings}` instead of the validated options, which would wipe the auto-assigned `id: 'default'`.
 3. Renames `docusaurus-plugin-new-post-toast`'s `contentLoaded` hook to `allContentLoaded` — the plugin reads `args.allContent`, which Docusaurus only populates in the latter hook.
 

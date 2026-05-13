@@ -8,7 +8,7 @@ sidebar_label: Overview
 
 Three things in one package:
 
-1. **An auto-generated glossary page** at `/glossary` (or wherever you configure it) — alphabetized, searchable, with letter-based navigation
+1. **An auto-generated glossary page** at `/glossary` (or wherever you configure it) — alphabetized, with letter-based navigation and a search box that matches against term names, definitions, abbreviations, and aliases
 2. **A `<GlossaryTerm>` theme component** you can use inline in MDX
 3. **A remark plugin** that automatically detects glossary terms in your markdown and wraps them with `<GlossaryTerm>` — no manual imports needed
 
