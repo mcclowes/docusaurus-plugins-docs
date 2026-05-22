@@ -1,0 +1,15 @@
+# Dependabot — low-churn policy: monthly cadence, all updates for this
+# docs site batched into a single grouped PR. Security updates are left
+# ungrouped so they still arrive promptly.
+# Docs: https://docs.github.com/code-security/dependabot/dependabot-version-updates
+version: 2
+updates:
+  - package-ecosystem: "npm"
+    directory: "/"
+    schedule:
+      interval: "monthly"
+    open-pull-requests-limit: 1
+    groups:
+      all-dependencies:
+        patterns: ["*"]
+        update-types: ["major", "minor", "patch"]
