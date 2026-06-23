@@ -14,6 +14,22 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
+/* Prevent vertical layout shift when the marginalia lastChange row appears on
+   hover. The element must be rendered unconditionally in the component so it
+   always occupies its natural height; CSS then fades it in/out via opacity
+   rather than display so no reflow occurs. */
+body.marginalia-active [class*='lastChange'] {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.15s ease;
+}
+
+body.marginalia-active [class*='card']:hover [class*='lastChange'],
+body.marginalia-active [class*='card'][class*='hot'] [class*='lastChange'] {
+  opacity: 1;
+  pointer-events: auto;
+}
+
 [data-theme='dark'] {
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: #21af90;
