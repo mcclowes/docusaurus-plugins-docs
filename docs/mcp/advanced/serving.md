@@ -25,17 +25,25 @@ Point a client at `http://localhost:3100/mcp`, or inspect it with `npx @modelcon
 
 ## Production
 
-Add one serverless function that imports the snapshot. The handler is a standard Node `(req, res)`, so it drops into any Node serverless runtime or an Express route. Vercel example:
+Add one serverless function that imports the snapshot. The handler is a standard Node `(req, res)`, so it drops into any Node serverless runtime or an Express route. This site deploys to Vercel, which is exactly what `api/mcp.ts` here does:
 
 ```ts
 // api/mcp.ts
 import { createNodeHandler } from 'docusaurus-plugin-mcp/server';
-import snapshot from '../build/mcp/snapshot.json' assert { type: 'json' };
+import snapshot from '../build/mcp/snapshot.json' with { type: 'json' };
+
+export const config = { maxDuration: 60 };
 
 export default createNodeHandler(snapshot, { name: 'my-docs', version: '1.0.0' });
 ```
 
-It's stateless: a fresh server is created per request, so it scales horizontally with no session store. See [`examples/vercel`](https://github.com/mcclowes/docusaurus-plugin-mcp/tree/main/examples/vercel) for the full setup.
+Vercel builds the site first, so `build/mcp/snapshot.json` exists when it traces the function. A `vercel.json` rewrite maps the clean `/mcp` path onto the function:
+
+```json
+{ "rewrites": [{ "source": "/mcp", "destination": "/api/mcp" }] }
+```
+
+It's stateless: a fresh server is created per request, so it scales horizontally with no session store. Rebuild (redeploy) to refresh the snapshot. See [`examples/vercel`](https://github.com/mcclowes/docusaurus-plugin-mcp/tree/main/examples/vercel) for the upstream example.
 
 ## Programmatic use
 

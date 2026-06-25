@@ -37,6 +37,16 @@ The server exposes six read-only tools:
 
 The three `*_api` tools only appear when you configure [`openapi`](./advanced/openapi.md). Everything is read-only.
 
+## Live demo
+
+This site runs the plugin. A build emits `build/mcp/snapshot.json` indexing every page you're reading, served live at [`https://docusaurus-plugins.mcclowes.com/mcp`](https://docusaurus-plugins.mcclowes.com/mcp) by a Vercel function (`api/mcp.ts`). Connect an agent to it:
+
+```bash
+claude mcp add --transport http plugins-docs https://docusaurus-plugins.mcclowes.com/mcp
+```
+
+Locally, run `npm run mcp` after a build and point a client at `http://localhost:3100/mcp` instead. See [serving](./advanced/serving.md) for both paths.
+
 ## Real-world example
 
 Runnable Vercel serving example at [`examples/vercel`](https://github.com/mcclowes/docusaurus-plugin-mcp/tree/main/examples/vercel).
