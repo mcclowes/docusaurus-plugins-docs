@@ -6,7 +6,7 @@ const config: Config = {
   title: 'Docusaurus Plugins',
   tagline: 'A family of Docusaurus v3 plugins — documented and dogfooded here.',
   favicon: 'img/logo.svg',
-  url: 'https://docusaurus-plugins-docs.example.com',
+  url: 'https://docusaurus-plugins.mcclowes.com',
   baseUrl: '/',
   organizationName: 'mcclowes',
   projectName: 'docusaurus-plugins-docs',
