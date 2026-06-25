@@ -39,7 +39,7 @@ The three `*_api` tools only appear when you configure [`openapi`](./advanced/op
 
 ## Live demo
 
-This site runs the plugin. A build emits `build/mcp/snapshot.json` indexing every page you're reading. To search these docs from your own agent, build the site and run `npm run mcp`, then point a client at `http://localhost:3100/mcp`. See [serving](./advanced/serving.md) for the details.
+This site runs the plugin. A build emits `build/mcp/snapshot.json` indexing every page you're reading. Locally, run `npm run mcp` after a build and point a client at `http://localhost:3100/mcp`. In production it's served by a Vercel function (`api/mcp.ts`) at `/mcp`. See [serving](./advanced/serving.md) for both paths.
 
 ## Real-world example
 
