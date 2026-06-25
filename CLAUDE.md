@@ -21,6 +21,7 @@ Each is a standalone npm package (not a workspace). Most install from the npm re
 | —                     | `docusaurus-plugin-cookie-consent` | `/docs/cookie-consent/*` |
 | —                     | `docusaurus-plugin-glossary`       | `/docs/glossary/*`       |
 | —                     | `docusaurus-plugin-marginalia`     | `/docs/marginalia/*`     |
+| —                     | `docusaurus-plugin-mcp`            | `/docs/mcp/*`            |
 | —                     | `docusaurus-plugin-new-post-toast` | `/docs/new-post-toast/*` |
 | —                     | `docusaurus-plugin-omg`            | `/docs/omg/*`            |
 | —                     | `docusaurus-plugin-starter`        | `/docs/starter/*`        |
@@ -71,6 +72,8 @@ Root fixes belong in the plugin repos. If a plugin publishes a release with the 
 `docusaurus-plugin-starter` is intentionally **not** registered in `docusaurus.config.ts`. It's a template for building new plugins, not a library — its demo route has SSR issues when consumed from a sibling site because it's meant to be forked.
 
 `docusaurus-plugin-marginalia` is currently **documented but not installed**. The plugin exists as a sibling repo (`~/Development/docusaurus/docusaurus-plugin-marginalia`) but isn't yet published to npm. Its docs (`docs/marginalia/*`) and sidebar entry are in place so the install step is a small PR away; don't remove them. Once published, add it to `package.json` and register it in `docusaurus.config.ts` alongside the other plugins.
+
+`docusaurus-plugin-mcp` is currently **documented but not installed**. The plugin (sibling repo `~/Development/docusaurus/docusaurus-plugin-mcp`) only produces a build-time `snapshot.json`; serving MCP needs a separate piece (its `serve` CLI for dev, or a serverless function in prod). Registering it would index this site's docs but show no visible UI, so its docs (`docs/mcp/*`) and sidebar entry are in place without a config entry. To dogfood it: add it to `package.json`, register it in `docusaurus.config.ts`, and add a serverless route that imports the snapshot (see `docs/mcp/advanced/serving.md`).
 
 ## Out of scope
 

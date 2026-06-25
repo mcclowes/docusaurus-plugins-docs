@@ -135,6 +135,7 @@ const config: Config = {
             { label: 'Cookie consent', to: '/docs/cookie-consent/overview' },
             { label: 'Glossary', to: '/docs/glossary/overview' },
             { label: 'Marginalia', to: '/docs/marginalia/overview' },
+            { label: 'MCP', to: '/docs/mcp/overview' },
             { label: 'New post toast', to: '/docs/new-post-toast/overview' },
             { label: 'omg', to: '/docs/omg/overview' },
             { label: 'Starter', to: '/docs/starter/overview' },

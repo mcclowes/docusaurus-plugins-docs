@@ -71,6 +71,20 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'MCP',
+      link: { type: 'doc', id: 'mcp/overview' },
+      items: [
+        'mcp/getting-started',
+        'mcp/configuration',
+        {
+          type: 'category',
+          label: 'Advanced',
+          items: ['mcp/advanced/openapi', 'mcp/advanced/serving'],
+        },
+      ],
+    },
+    {
+      type: 'category',
       label: 'New post toast',
       link: { type: 'doc', id: 'new-post-toast/overview' },
       items: [
