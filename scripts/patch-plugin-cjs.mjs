@@ -23,6 +23,7 @@ const packages = [
   'docusaurus-plugin-banner',
   'docusaurus-plugin-cookie-consent',
   'docusaurus-plugin-statuspage',
+  'docusaurus-plugin-mcp',
 ];
 
 // Variable names vary between packages (currentFilePath / currentDir,

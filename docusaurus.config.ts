@@ -99,6 +99,22 @@ const config: Config = {
         linkLabel: 'View status',
       },
     ],
+
+    // Indexes these docs into build/mcp/snapshot.json at build time. Serve it
+    // locally with `npm run mcp` and point an agent at http://localhost:3100/mcp
+    // to search the plugin docs. routeBasePath matches where docs are served
+    // (/docs) so generated page URLs resolve. OpenAPI indexing is demoed via the
+    // serve CLI's --openapi flag (see `npm run mcp:api`) rather than here, since
+    // the OMG-generated spec is a build artifact and would break clean builds.
+    [
+      'docusaurus-plugin-mcp',
+      {
+        server: { name: 'docusaurus-plugins-docs', version: '0.1.0' },
+        routeBasePath: '/docs',
+        instructions:
+          'Search these docs to answer questions about the Docusaurus plugins documented here.',
+      },
+    ],
   ],
 
   themeConfig: {

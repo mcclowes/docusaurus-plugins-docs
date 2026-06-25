@@ -37,6 +37,10 @@ The server exposes six read-only tools:
 
 The three `*_api` tools only appear when you configure [`openapi`](./advanced/openapi.md). Everything is read-only.
 
+## Live demo
+
+This site runs the plugin. A build emits `build/mcp/snapshot.json` indexing every page you're reading. To search these docs from your own agent, build the site and run `npm run mcp`, then point a client at `http://localhost:3100/mcp`. See [serving](./advanced/serving.md) for the details.
+
 ## Real-world example
 
 Runnable Vercel serving example at [`examples/vercel`](https://github.com/mcclowes/docusaurus-plugin-mcp/tree/main/examples/vercel).
