@@ -49,7 +49,7 @@ const config: Config = {
         content:
           '🎉 You are looking at a site that uses every plugin documented here — try them out.',
         dismissible: true,
-        backgroundColor: '#2563eb',
+        backgroundColor: '#2e8555',
         textColor: '#ffffff',
       },
     ],
@@ -149,7 +149,7 @@ const config: Config = {
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} — MIT licensed.`,
+      copyright: `Copyright © ${new Date().getFullYear()} — MIT licensed. An independent, community-maintained collection of Docusaurus plugins. Not affiliated with or endorsed by the Docusaurus project or Meta.`,
     },
     prism: {
       theme: prismThemes.github,
