@@ -35,8 +35,8 @@
     "docusaurus-plugin-starter": "file:./vendor/docusaurus-plugin-starter-0.2.0.tgz",
     "docusaurus-plugin-statuspage": "^0.1.0",
     "prism-react-renderer": "^2.3.0",
-    "react": "^19.2.7",
-    "react-dom": "^19.2.7"
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^3.5.0",
@@ -44,7 +44,7 @@
     "@docusaurus/types": "^3.5.0",
     "@typescript-eslint/eslint-plugin": "^8.62.1",
     "@typescript-eslint/parser": "^8.62.1",
-    "eslint": "^10.6.0",
+    "eslint": "^9.39.0",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-react": "^7.35.0",
     "prettier": "^3.9.4",
