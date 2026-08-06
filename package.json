@@ -22,13 +22,13 @@
     "postinstall": "node scripts/patch-plugin-cjs.mjs"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.5.0",
-    "@docusaurus/preset-classic": "^3.5.0",
+    "@docusaurus/core": "^3.10.1",
+    "@docusaurus/preset-classic": "^3.10.1",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.1.0",
     "docusaurus-plugin-banner": "^0.4.0",
-    "docusaurus-plugin-cookie-consent": "^4.5.0",
-    "docusaurus-plugin-glossary": "^3.2.0",
+    "docusaurus-plugin-cookie-consent": "^4.6.0",
+    "docusaurus-plugin-glossary": "^3.3.4",
     "docusaurus-plugin-mcp": "^0.1.0",
     "docusaurus-plugin-new-post-toast": "file:./vendor/docusaurus-plugin-new-post-toast-0.2.0.tgz",
     "docusaurus-plugin-omg": "^0.1.1",
@@ -40,15 +40,15 @@
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^3.5.0",
-    "@docusaurus/tsconfig": "^3.5.0",
+    "@docusaurus/tsconfig": "^3.10.1",
     "@docusaurus/types": "^3.5.0",
-    "@typescript-eslint/eslint-plugin": "^7.18.0",
-    "@typescript-eslint/parser": "^7.18.0",
-    "eslint": "^8.57.0",
-    "eslint-config-prettier": "^9.1.0",
+    "@typescript-eslint/eslint-plugin": "^8.62.1",
+    "@typescript-eslint/parser": "^8.62.1",
+    "eslint": "^9.39.0",
+    "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-react": "^7.35.0",
-    "prettier": "^3.3.0",
-    "typescript": "~5.5.0"
+    "prettier": "^3.9.4",
+    "typescript": "~6.0.3"
   },
   "browserslist": {
     "production": [
