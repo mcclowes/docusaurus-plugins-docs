@@ -3,20 +3,34 @@ title: Docusaurus plugins
 hide_table_of_contents: true
 ---
 
+import NpmPackageCard from '@site/src/components/NpmPackageCard';
+
+<style>{`
+  .npm-package-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr));
+    gap: 1rem;
+  }
+`}</style>
+
 # Docusaurus plugins
 
 A family of small, focused plugins for Docusaurus v3 — documented and **dogfooded** on this site. Every plugin you read about here is installed and running right now on the site you're looking at.
 
 ## Plugins
 
-- **[Banner](/docs/banner/overview)** — dismissable announcement at the top of the page
-- **[Cookie consent](/docs/cookie-consent/overview)** — GDPR modal with Google Consent Mode v2
-- **[Glossary](/docs/glossary/overview)** — auto-generated glossary, inline term tooltips, auto-linking
-- **[Marginalia](/docs/marginalia/overview)** — editorial sidenotes that pack top-down in the right margin
-- **[New post toast](/docs/new-post-toast/overview)** — toast notifications for new blog posts since your last visit
-- **[omg](/docs/omg/overview)** — build-time OMG → OpenAPI 3.1 compiler
-- **[Starter](/docs/starter/overview)** — template for building your own Docusaurus plugin
-- **[Statuspage](/docs/statuspage/overview)** — incident banner from any public Statuspage.io
+<div className="npm-package-grid">
+  <NpmPackageCard package="docusaurus-plugin-banner" />
+  <NpmPackageCard package="docusaurus-plugin-cookie-consent" />
+  <NpmPackageCard package="docusaurus-plugin-glossary" />
+  <NpmPackageCard package="docusaurus-plugin-mcp" />
+  <NpmPackageCard package="docusaurus-plugin-new-post-toast" />
+  <NpmPackageCard package="docusaurus-plugin-omg" />
+  <NpmPackageCard package="docusaurus-plugin-starter" />
+  <NpmPackageCard package="docusaurus-plugin-statuspage" />
+</div>
+
+[Marginalia](/docs/marginalia/overview) is documented here too, but it isn't published to npm yet.
 
 ## Get started
 
