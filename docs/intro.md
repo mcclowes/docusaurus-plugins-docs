@@ -23,6 +23,10 @@ This site documents — and dogfoods — a family of Docusaurus v3 plugins. Ever
 | [**Starter**](./starter/overview.md)               | A lean template for building your own Docusaurus plugin: lifecycle hooks, client modules, remark, theme, and tests. |
 | [**Statuspage**](./statuspage/overview.md)         | Discreet banner that surfaces ongoing incidents from a public Statuspage.io instance.                               |
 
+## Speccy
+
+[Speccy for Docusaurus](https://github.com/mcclowes/speccy/tree/main/packages/docusaurus-plugin) turns an OpenAPI document into a full reference route or an embeddable MDX reference. Speccy is maintained in its own repository, so its installation and configuration docs live there rather than being duplicated on this site.
+
 ## How the docs are organised
 
 Each plugin has:

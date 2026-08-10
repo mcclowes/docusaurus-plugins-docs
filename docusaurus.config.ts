@@ -161,6 +161,10 @@ const config: Config = {
         {
           title: 'More',
           items: [
+            {
+              label: 'Speccy',
+              href: 'https://github.com/mcclowes/speccy/tree/main/packages/docusaurus-plugin',
+            },
             { label: 'Blog', to: '/blog' },
             { label: 'GitHub', href: 'https://github.com/mcclowes' },
           ],
