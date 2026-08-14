@@ -26,7 +26,7 @@ Docusaurus is built around a single brand color expanded into seven shades, ligh
 | `--ifm-color-primary-lighter`  | `#1d886e` |
 | `--ifm-color-primary-lightest` | `#219a7c` |
 
-### Dark mode (`[data-theme='dark']`)
+### Dark mode (`html[data-theme='dark']`)
 
 | Token                          | Hex       |
 | ------------------------------ | --------- |
@@ -62,7 +62,7 @@ Used to highlight specific lines in a code block. Dark mode runs a heavier alpha
 
 ## Dark mode
 
-Both themes are first-class, not an afterthought. Docusaurus toggles them with a `data-theme` attribute on the root element: `data-theme="light"` or `data-theme="dark"`. Scope any theme-specific CSS to those selectors, the same way `custom.css` does.
+Both themes are first-class, not an afterthought. Docusaurus toggles them with a `data-theme` attribute on the root element: `data-theme="light"` or `data-theme="dark"`. Scope dark-theme tokens to `html[data-theme='dark']`, matching Infima's specificity so its defaults don't override them.
 
 When you add a color, define it in both blocks. A value that only exists in `:root` will fall back oddly or vanish in dark mode.
 
