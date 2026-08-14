@@ -11,23 +11,20 @@ This site documents — and dogfoods — a family of Docusaurus v3 plugins. Ever
 
 ## The plugins
 
-| Plugin                                             | What it does                                                                                                        |
-| -------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------- |
-| [**Banner**](./banner/overview.md)                 | Dismissable announcement banner at the top of every page, with localStorage persistence.                            |
-| [**Cookie consent**](./cookie-consent/overview.md) | GDPR-style consent modal/toast with Google Consent Mode v2 integration and a React hook for gated scripts.          |
-| [**Embeds**](./embeds/overview.md)                 | Rich MDX cards for links, GitHub repositories, npm packages, and YouTube videos.                                    |
-| [**Glossary**](./glossary/overview.md)             | Auto-generated glossary page, a `GlossaryTerm` component, and a remark plugin that auto-links terms in markdown.    |
-| [**Marginalia**](./marginalia/overview.md)         | Editorial sidenotes: inline anchors paired with cards that pack top-down in the right margin and highlight on scroll.|
-| [**MCP**](./mcp/overview.md)                       | Build-time MCP server exposing your docs and OpenAPI specs, so AI agents can search docs and inspect endpoints.     |
-| [**New post toast**](./new-post-toast/overview.md) | Toast notifications for new blog posts since the user's last visit — purely client-side.                            |
-| [**Open with LLM**](./open-with-llm/overview.md)   | Copy, view, download, or open each docs page as Markdown in ChatGPT, Claude, or another provider.                    |
-| [**omg**](./omg/overview.md)                       | Build-time OMG → OpenAPI 3.1 compiler that reads markdown-defined APIs and writes a spec to `static/`.              |
-| [**Starter**](./starter/overview.md)               | A lean template for building your own Docusaurus plugin: lifecycle hooks, client modules, remark, theme, and tests. |
-| [**Statuspage**](./statuspage/overview.md)         | Discreet banner that surfaces ongoing incidents from a public Statuspage.io instance.                               |
-
-## Speccy
-
-[Speccy for Docusaurus](https://github.com/mcclowes/speccy/tree/main/packages/docusaurus-plugin) turns an OpenAPI document into a full reference route or an embeddable MDX reference. Speccy is maintained in its own repository, so its installation and configuration docs live there rather than being duplicated on this site.
+| Plugin                                                                                             | What it does                                                                                                          |
+| -------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------- |
+| [**Banner**](./banner/overview.md)                                                                 | Dismissable announcement banner at the top of every page, with localStorage persistence.                              |
+| [**Cookie consent**](./cookie-consent/overview.md)                                                 | GDPR-style consent modal/toast with Google Consent Mode v2 integration and a React hook for gated scripts.            |
+| [**Embeds**](./embeds/overview.md)                                                                 | Rich MDX cards for links, GitHub repositories, npm packages, and YouTube videos.                                      |
+| [**Glossary**](./glossary/overview.md)                                                             | Auto-generated glossary page, a `GlossaryTerm` component, and a remark plugin that auto-links terms in markdown.      |
+| [**Marginalia**](./marginalia/overview.md)                                                         | Editorial sidenotes: inline anchors paired with cards that pack top-down in the right margin and highlight on scroll. |
+| [**MCP**](./mcp/overview.md)                                                                       | Build-time MCP server exposing your docs and OpenAPI specs, so AI agents can search docs and inspect endpoints.       |
+| [**New post toast**](./new-post-toast/overview.md)                                                 | Toast notifications for new blog posts since the user's last visit — purely client-side.                              |
+| [**Open with LLM**](./open-with-llm/overview.md)                                                   | Copy, view, download, or open each docs page as Markdown in ChatGPT, Claude, or another provider.                     |
+| [**omg**](./omg/overview.md)                                                                       | Build-time OMG → OpenAPI 3.1 compiler that reads markdown-defined APIs and writes a spec to `static/`.                |
+| [**Speccy**](https://github.com/mcclowes/speccy/blob/main/apps/docusaurus-demo/docs/docusaurus.md) | Generated OpenAPI reference routes and embeddable API references for MDX.                                             |
+| [**Starter**](./starter/overview.md)                                                               | A lean template for building your own Docusaurus plugin: lifecycle hooks, client modules, remark, theme, and tests.   |
+| [**Statuspage**](./statuspage/overview.md)                                                         | Discreet banner that surfaces ongoing incidents from a public Statuspage.io instance.                                 |
 
 ## How the docs are organised
 
@@ -38,7 +35,7 @@ Each plugin has:
 - **Configuration** — the full option table
 - **Advanced** — nested pages for deeper features (categories, hooks, Google Consent Mode, remark integration, etc.)
 
-Every plugin repo also ships a runnable `examples/` directory — those are linked from each plugin's overview page.
+Each plugin's overview or external guide links to its runnable examples.
 
 ## Compatibility
 

@@ -4,16 +4,17 @@ Documentation site for a family of Docusaurus v3 plugins — and a live demo of 
 
 ## Plugins
 
-| Plugin                                                                                               | Docs                                            |
-| ---------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| [`docusaurus-plugin-banner`](https://www.npmjs.com/package/docusaurus-plugin-banner)                 | [`/docs/banner`](./docs/banner)                 |
-| [`docusaurus-plugin-cookie-consent`](https://www.npmjs.com/package/docusaurus-plugin-cookie-consent) | [`/docs/cookie-consent`](./docs/cookie-consent) |
-| [`docusaurus-plugin-glossary`](https://www.npmjs.com/package/docusaurus-plugin-glossary)             | [`/docs/glossary`](./docs/glossary)             |
-| `docusaurus-plugin-marginalia` (not yet published)                                                   | [`/docs/marginalia`](./docs/marginalia)         |
-| [`docusaurus-plugin-new-post-toast`](https://www.npmjs.com/package/docusaurus-plugin-new-post-toast) | [`/docs/new-post-toast`](./docs/new-post-toast) |
-| [`docusaurus-plugin-omg`](https://www.npmjs.com/package/docusaurus-plugin-omg)                       | [`/docs/omg`](./docs/omg)                       |
-| [`docusaurus-plugin-starter`](https://www.npmjs.com/package/docusaurus-plugin-starter)               | [`/docs/starter`](./docs/starter)               |
-| [`docusaurus-plugin-statuspage`](https://www.npmjs.com/package/docusaurus-plugin-statuspage)         | [`/docs/statuspage`](./docs/statuspage)         |
+| Plugin                                                                                               | Docs                                                                                                |
+| ---------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| [`docusaurus-plugin-banner`](https://www.npmjs.com/package/docusaurus-plugin-banner)                 | [`/docs/banner`](./docs/banner)                                                                     |
+| [`docusaurus-plugin-cookie-consent`](https://www.npmjs.com/package/docusaurus-plugin-cookie-consent) | [`/docs/cookie-consent`](./docs/cookie-consent)                                                     |
+| [`docusaurus-plugin-glossary`](https://www.npmjs.com/package/docusaurus-plugin-glossary)             | [`/docs/glossary`](./docs/glossary)                                                                 |
+| `docusaurus-plugin-marginalia` (not yet published)                                                   | [`/docs/marginalia`](./docs/marginalia)                                                             |
+| [`docusaurus-plugin-new-post-toast`](https://www.npmjs.com/package/docusaurus-plugin-new-post-toast) | [`/docs/new-post-toast`](./docs/new-post-toast)                                                     |
+| [`docusaurus-plugin-omg`](https://www.npmjs.com/package/docusaurus-plugin-omg)                       | [`/docs/omg`](./docs/omg)                                                                           |
+| [`docusaurus-plugin-speccy`](https://www.npmjs.com/package/docusaurus-plugin-speccy)                 | [Speccy docs](https://github.com/mcclowes/speccy/blob/main/apps/docusaurus-demo/docs/docusaurus.md) |
+| [`docusaurus-plugin-starter`](https://www.npmjs.com/package/docusaurus-plugin-starter)               | [`/docs/starter`](./docs/starter)                                                                   |
+| [`docusaurus-plugin-statuspage`](https://www.npmjs.com/package/docusaurus-plugin-statuspage)         | [`/docs/statuspage`](./docs/statuspage)                                                             |
 
 ## Development
 

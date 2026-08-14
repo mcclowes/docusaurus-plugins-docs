@@ -138,6 +138,11 @@ const sidebars: SidebarsConfig = {
       ],
     },
     {
+      type: 'link',
+      label: 'Speccy',
+      href: 'https://github.com/mcclowes/speccy/blob/main/apps/docusaurus-demo/docs/docusaurus.md',
+    },
+    {
       type: 'category',
       label: 'Statuspage',
       link: { type: 'doc', id: 'statuspage/overview' },

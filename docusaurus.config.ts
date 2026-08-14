@@ -158,6 +158,10 @@ const config: Config = {
             { label: 'New post toast', to: '/docs/new-post-toast/overview' },
             { label: 'Open with LLM', to: '/docs/open-with-llm/overview' },
             { label: 'omg', to: '/docs/omg/overview' },
+            {
+              label: 'Speccy',
+              href: 'https://github.com/mcclowes/speccy/blob/main/apps/docusaurus-demo/docs/docusaurus.md',
+            },
             { label: 'Starter', to: '/docs/starter/overview' },
             { label: 'Statuspage', to: '/docs/statuspage/overview' },
           ],
@@ -165,10 +169,6 @@ const config: Config = {
         {
           title: 'More',
           items: [
-            {
-              label: 'Speccy',
-              href: 'https://github.com/mcclowes/speccy/tree/main/packages/docusaurus-plugin',
-            },
             { label: 'Blog', to: '/blog' },
             { label: 'GitHub', href: 'https://github.com/mcclowes' },
           ],
