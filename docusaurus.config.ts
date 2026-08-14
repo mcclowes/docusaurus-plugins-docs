@@ -149,10 +149,12 @@ const config: Config = {
           items: [
             { label: 'Banner', to: '/docs/banner/overview' },
             { label: 'Cookie consent', to: '/docs/cookie-consent/overview' },
+            { label: 'Embeds', to: '/docs/embeds/overview' },
             { label: 'Glossary', to: '/docs/glossary/overview' },
             { label: 'Marginalia', to: '/docs/marginalia/overview' },
             { label: 'MCP', to: '/docs/mcp/overview' },
             { label: 'New post toast', to: '/docs/new-post-toast/overview' },
+            { label: 'Open with LLM', to: '/docs/open-with-llm/overview' },
             { label: 'omg', to: '/docs/omg/overview' },
             { label: 'Starter', to: '/docs/starter/overview' },
             { label: 'Statuspage', to: '/docs/statuspage/overview' },

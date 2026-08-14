@@ -57,6 +57,12 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'Embeds',
+      link: { type: 'doc', id: 'embeds/overview' },
+      items: ['embeds/getting-started', 'embeds/configuration'],
+    },
+    {
+      type: 'category',
       label: 'Marginalia',
       link: { type: 'doc', id: 'marginalia/overview' },
       items: [
@@ -96,6 +102,12 @@ const sidebars: SidebarsConfig = {
           items: ['new-post-toast/advanced/multiple-blogs', 'new-post-toast/advanced/storage'],
         },
       ],
+    },
+    {
+      type: 'category',
+      label: 'Open with LLM',
+      link: { type: 'doc', id: 'open-with-llm/overview' },
+      items: ['open-with-llm/getting-started', 'open-with-llm/configuration'],
     },
     {
       type: 'category',
