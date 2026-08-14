@@ -125,7 +125,6 @@ const config: Config = {
       logo: { alt: 'Logo', src: 'img/logo.svg' },
       items: [
         { to: '/docs/intro', label: 'Docs', position: 'left' },
-        { to: '/glossary', label: 'Glossary', position: 'left' },
         { to: '/blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/mcclowes',
