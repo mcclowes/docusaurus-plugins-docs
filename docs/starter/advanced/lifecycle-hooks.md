@@ -32,8 +32,8 @@ async contentLoaded({ content, actions }) {
 
   actions.addRoute({
     path: options.routePath,
-    component: '@theme/StarterPage',
-    modules: { data: dataPath },
+    component: path.join(__dirname, 'components/StarterPage.js'),
+    modules: { starterData: dataPath },
     exact: true,
   })
 

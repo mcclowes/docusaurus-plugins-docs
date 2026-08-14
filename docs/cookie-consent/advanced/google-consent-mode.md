@@ -17,9 +17,6 @@ If you use Google Tag Manager, GA4, or Google Ads, enable [Google Consent Mode v
     adsDataRedaction: true,
     urlPassthrough: false,
   },
-  onConsentChange: (consent) => {
-    console.log('Consent updated:', consent)
-  },
 }
 ```
 
@@ -42,9 +39,9 @@ plugins: [
 
 ## How it works
 
-1. Before GTM loads, default consent for all categories is set to `denied`
-2. On page load, stored consent is applied immediately if present
-3. When the user consents, `gtag('consent', 'update', ...)` fires
+1. Before GTM loads, optional Google consent signals are set to `denied`; `security_storage` remains `granted`.
+2. On page load, valid, unexpired stored consent is applied immediately if present.
+3. When the user changes or resets consent, `gtag('consent', 'update', ...)` fires.
 
 ## GTM tag configuration
 

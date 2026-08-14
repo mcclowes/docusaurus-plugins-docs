@@ -11,14 +11,14 @@ A customizable, dismissable announcement banner that sits above your navbar. Dis
 ## Why use it
 
 - You want a top-of-page announcement without swizzling the theme
-- You need per-banner dismissal state (multiple banners = multiple `id`s)
+- You need a stable dismissal key that can be versioned when an announcement changes
 - You want plain HTML content and full control over colors
 
 ## At a glance
 
 - Dismissable with a close button (optional)
 - Customizable colors, content (plain text or HTML), and link styling
-- Multiple instances supported via unique `id`
+- Optional `id` and `version` values for dismissal-key isolation and invalidation
 - Smooth animation on dismiss
 - TypeScript types exported
 

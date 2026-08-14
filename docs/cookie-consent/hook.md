@@ -28,6 +28,7 @@ export default function AnalyticsGate() {
 
 ```ts
 const {
+  loading: boolean
   hasConsent: () => boolean
   hasCategoryConsent: (c: 'necessary' | 'analytics' | 'marketing' | 'functional') => boolean
   preferences: CookiePreferences | null
@@ -39,6 +40,10 @@ const {
   resetConsent: () => void
 } = useCookieConsent()
 ```
+
+`loading` remains `true` until stored preferences have been read in the browser. During server rendering, the hook returns safe defaults: `loading` is `true`, consent checks return `false`, and mutation methods do nothing. Once the provider is running in the browser, `hasCategoryConsent('necessary')` always returns `true`.
+
+`rejectAll` is a backward-compatible alias for `rejectOptional`. Necessary cookies can never be rejected.
 
 ## The `CookiePreferences` shape
 

@@ -11,7 +11,7 @@ sidebar_label: Overview
 A GDPR-friendly cookie consent modal/toast for Docusaurus sites with:
 
 - Configurable text (markdown links supported) and link list
-- Accept all / Reject optional / Reject all buttons
+- Accept all and reject optional actions with configurable labels
 - Cookie categories (necessary, analytics, marketing, functional)
 - `useCookieConsent` hook for gating scripts on consent
 - Google Consent Mode v2 integration for GTM/GA4/Ads
@@ -38,7 +38,8 @@ The plugin ships a sample site plus four client-integration snippets at [`exampl
 ## Compatibility
 
 - Docusaurus `^3.0.0`
-- React `^18.2.0`
+- React `^18.2.0` or `^19.0.0`
+- Node.js `>=20`
 
 ## What this plugin is **not**
 

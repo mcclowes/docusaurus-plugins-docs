@@ -79,3 +79,13 @@ export default {
 ```
 
 But the real value kicks in when you fork and strip it down.
+
+## Example plugin options
+
+| Option            | Type      | Default                        | Description                                                  |
+| ----------------- | --------- | ------------------------------ | ------------------------------------------------------------ |
+| `enabled`         | `boolean` | `true`                         | Disable the route and client module without removing config. |
+| `greetingMessage` | `string`  | `'Hello from plugin-starter!'` | Text rendered by the example route and theme component.      |
+| `routePath`       | `string`  | `'/starter'`                   | Route registered by the example plugin.                      |
+
+The bundled remark plugin separately accepts `marker` (default `'TODO'`) and `replacement` (default `'✅ TODO'`).

@@ -34,4 +34,4 @@ That's it. The banner appears at the very top of the site and can be dismissed â
 ## Next
 
 - See [Configuration](./configuration.md) for the full option list
-- See [Multiple banners](./advanced/multiple-banners.md) if you need more than one
+- See [Banner dismissal versions](./advanced/multiple-banners.md) to control when changed content reappears

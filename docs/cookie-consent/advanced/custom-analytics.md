@@ -95,17 +95,4 @@ window.addEventListener('cookieConsentChange', (event) => {
 });
 ```
 
-## `onConsentChange` callback
-
-For React-land integrations without going through the DOM event, use the config callback:
-
-```ts
-{
-  onConsentChange: (consent) => {
-    if (consent.analytics) enableAnalytics()
-    else disableAnalytics()
-  },
-}
-```
-
-The DOM event works everywhere including vanilla client modules; the callback runs inside React context only.
+For React integrations, use [`useCookieConsent`](../hook.md). Client modules that aren't rendered inside React can use the DOM event.

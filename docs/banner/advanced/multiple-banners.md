@@ -3,9 +3,11 @@ id: multiple-banners
 title: Multiple banners
 ---
 
-# Multiple banners
+# Banner dismissal versions
 
-You can register the plugin multiple times to stack banners. Each instance needs a unique `id` so dismissal state is tracked per-banner — otherwise they'll all share the same `localStorage` key and dismissing one will dismiss them all.
+The current client module renders one banner. Registering the plugin more than once does not stack banners.
+
+Use `id` to give that banner a distinct dismissal key. This is useful when separate site configurations share the same origin or storage namespace:
 
 ```ts
 plugins: [
@@ -16,31 +18,24 @@ plugins: [
       content: 'Welcome to our docs!',
     },
   ],
-  [
-    'docusaurus-plugin-banner',
-    {
-      id: 'newsletter',
-      content: 'Subscribe to our newsletter',
-      backgroundColor: '#10b981',
-    },
-  ],
 ];
 ```
 
-Each banner maintains its own dismissal state keyed by `id`. If you also set `storageKey`, that takes precedence over the default derived from `id`.
+With the default `storageKey`, this banner stores its dismissal under `docusaurus-banner-dismissed-welcome`.
 
-## Custom storage key
+## Re-showing changed content
 
-If you need to invalidate an existing dismissal — e.g. you've rewritten a banner's copy and want returning users to see it again — change the `storageKey`:
+Set `version` when you want people who dismissed an older announcement to see the replacement. Bumping it changes the effective storage key without making you rename `storageKey`:
 
 ```ts
 [
   'docusaurus-plugin-banner',
   {
-    content: 'New announcement (v2)',
-    storageKey: 'special-announcement-v2-dismissed',
+    id: 'announcement',
+    version: '2',
+    content: 'New announcement',
   },
 ];
 ```
 
-Users who dismissed the old version will now see the new one.
+The effective key is `docusaurus-banner-dismissed-announcement::v=2`. Keep `version` unchanged when edits should preserve existing dismissals.
