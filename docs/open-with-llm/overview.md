@@ -6,6 +6,8 @@ sidebar_label: Overview
 
 # `docusaurus-plugin-open-with-llm`
 
+![Banner for docusaurus-plugin-open-with-llm, featuring the plugin's dinosaur mascot](/img/plugin-banners/open-with-llm.png)
+
 Adds an **Open with AI** menu to every Docusaurus docs page. Readers can copy, view, or download the page as Markdown, or open it as context in ChatGPT or Claude.
 
 ## Why use it

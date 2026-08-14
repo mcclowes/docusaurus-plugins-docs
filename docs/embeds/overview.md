@@ -6,6 +6,8 @@ sidebar_label: Overview
 
 # `docusaurus-plugin-embeds`
 
+![Banner for docusaurus-plugin-embeds, featuring the plugin's dinosaur mascot](/img/plugin-banners/embeds.png)
+
 Rich MDX embeds for links, GitHub repositories, npm packages, and YouTube videos. The plugin registers each component globally, so you can use it in MDX without imports.
 
 ## Why use it

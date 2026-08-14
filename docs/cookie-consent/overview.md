@@ -6,6 +6,8 @@ sidebar_label: Overview
 
 # `docusaurus-plugin-cookie-consent`
 
+![Banner for docusaurus-plugin-cookie-consent, featuring the plugin's dinosaur mascot](/img/plugin-banners/cookie-consent.png)
+
 A GDPR-friendly cookie consent modal/toast for Docusaurus sites with:
 
 - Configurable text (markdown links supported) and link list

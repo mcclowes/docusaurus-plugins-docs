@@ -6,6 +6,8 @@ sidebar_label: Overview
 
 # `docusaurus-plugin-glossary`
 
+![Banner for docusaurus-plugin-glossary, featuring the plugin's dinosaur mascot](/img/plugin-banners/glossary.png)
+
 Three things in one package:
 
 1. **An auto-generated glossary page** at `/glossary` (or wherever you configure it) — alphabetized, with letter-based navigation and a search box that matches against term names, definitions, abbreviations, and aliases
