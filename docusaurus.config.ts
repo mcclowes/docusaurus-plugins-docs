@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Docusaurus Plugins',
   tagline: 'A family of Docusaurus v3 plugins — documented and dogfooded here.',
-  favicon: 'img/logo.svg',
+  favicon: 'img/docusaurus-plugins.png',
   url: 'https://docusaurus-plugins.mcclowes.com',
   baseUrl: '/',
   organizationName: 'mcclowes',
@@ -49,8 +49,8 @@ const config: Config = {
         content:
           '🎉 You are looking at a site that uses every plugin documented here — try them out.',
         dismissible: true,
-        backgroundColor: '#2e8555',
-        textColor: '#ffffff',
+        backgroundColor: '#173a58',
+        textColor: '#f4fffb',
       },
     ],
 
@@ -122,7 +122,10 @@ const config: Config = {
     colorMode: { defaultMode: 'light', respectPrefersColorScheme: true },
     navbar: {
       title: 'Docusaurus Plugins',
-      logo: { alt: 'Logo', src: 'img/logo.svg' },
+      logo: {
+        alt: 'Docusaurus Plugins dinosaur mascot',
+        src: 'img/docusaurus-plugins.png',
+      },
       items: [
         { to: '/docs/intro', label: 'Docs', position: 'left' },
         { to: '/blog', label: 'Blog', position: 'left' },

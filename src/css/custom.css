@@ -3,24 +3,58 @@
  */
 
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  --ifm-color-primary: #19765f;
+  --ifm-color-primary-dark: #176a56;
+  --ifm-color-primary-darker: #156450;
+  --ifm-color-primary-darkest: #115242;
+  --ifm-color-primary-light: #1b8268;
+  --ifm-color-primary-lighter: #1d886e;
+  --ifm-color-primary-lightest: #219a7c;
+  --ifm-color-emphasis-0: #f4fbf8;
+  --ifm-background-color: #f8fcfa;
+  --ifm-background-surface-color: #eef8f4;
+  --ifm-navbar-background-color: rgba(248, 252, 250, 0.94);
+  --ifm-footer-background-color: #102945;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --ifm-global-radius: 0.65rem;
+  --docusaurus-highlighted-code-line-bg: rgba(25, 118, 95, 0.12);
+}
+
+.navbar__logo {
+  height: 2.4rem;
+  margin-right: 0.65rem;
+}
+
+.navbar__logo img {
+  border-radius: 0.55rem;
 }
 
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #65d4b2;
+  --ifm-color-primary-dark: #4dcca5;
+  --ifm-color-primary-darker: #41c8a0;
+  --ifm-color-primary-darkest: #31aa87;
+  --ifm-color-primary-light: #7ddcbd;
+  --ifm-color-primary-lighter: #89dfc3;
+  --ifm-color-primary-lightest: #adebd7;
+  --ifm-background-color: #0c1f3a;
+  --ifm-background-surface-color: #112a47;
+  --ifm-navbar-background-color: rgba(12, 31, 58, 0.94);
+  --ifm-footer-background-color: #08172d;
+  --ifm-color-emphasis-100: #142f4c;
+  --ifm-color-emphasis-200: #1a3a58;
+  --ifm-color-emphasis-300: #2b4d68;
+  --ifm-toc-border-color: #21435f;
+  --ifm-hr-border-color: #21435f;
+  --docusaurus-highlighted-code-line-bg: rgba(101, 212, 178, 0.14);
+}
+
+[data-theme='dark'] .navbar,
+[data-theme='dark'] .footer {
+  border-color: #21435f;
+}
+
+[data-theme='dark'] .card,
+[data-theme='dark'] .theme-code-block {
+  border: 1px solid #21435f;
 }

@@ -12,50 +12,50 @@ Every color, font size, and spacing value below is a variable you can override i
 
 ## Color
 
-Docusaurus is built around a single brand color expanded into seven shades, light to dark. The base green is the Docusaurus signature; the teal is its dark-mode counterpart.
+Docusaurus is built around a single brand color expanded into seven shades, light to dark. This site takes its teal accent and deep navy surfaces from the dinosaur mascot.
 
 ### Light mode (`:root`)
 
-| Token | Hex |
-| --- | --- |
-| `--ifm-color-primary` | `#2e8555` |
-| `--ifm-color-primary-dark` | `#29784c` |
-| `--ifm-color-primary-darker` | `#277148` |
-| `--ifm-color-primary-darkest` | `#205d3b` |
-| `--ifm-color-primary-light` | `#33925d` |
-| `--ifm-color-primary-lighter` | `#359962` |
-| `--ifm-color-primary-lightest` | `#3cad6e` |
+| Token                          | Hex       |
+| ------------------------------ | --------- |
+| `--ifm-color-primary`          | `#19765f` |
+| `--ifm-color-primary-dark`     | `#176a56` |
+| `--ifm-color-primary-darker`   | `#156450` |
+| `--ifm-color-primary-darkest`  | `#115242` |
+| `--ifm-color-primary-light`    | `#1b8268` |
+| `--ifm-color-primary-lighter`  | `#1d886e` |
+| `--ifm-color-primary-lightest` | `#219a7c` |
 
 ### Dark mode (`[data-theme='dark']`)
 
-| Token | Hex |
-| --- | --- |
-| `--ifm-color-primary` | `#25c2a0` |
-| `--ifm-color-primary-dark` | `#21af90` |
-| `--ifm-color-primary-darker` | `#1fa588` |
-| `--ifm-color-primary-darkest` | `#1a8870` |
-| `--ifm-color-primary-light` | `#29d5b0` |
-| `--ifm-color-primary-lighter` | `#32d8b4` |
-| `--ifm-color-primary-lightest` | `#4fddbf` |
+| Token                          | Hex       |
+| ------------------------------ | --------- |
+| `--ifm-color-primary`          | `#65d4b2` |
+| `--ifm-color-primary-dark`     | `#4dcca5` |
+| `--ifm-color-primary-darker`   | `#41c8a0` |
+| `--ifm-color-primary-darkest`  | `#31aa87` |
+| `--ifm-color-primary-light`    | `#7ddcbd` |
+| `--ifm-color-primary-lighter`  | `#89dfc3` |
+| `--ifm-color-primary-lightest` | `#adebd7` |
 
-The base green sits at WCAG-AA contrast against white. If you ever pick a new brand color, keep that bar and generate the seven shades together (the Docusaurus docs point to [ColorBox](https://www.colorbox.io) for this) rather than eyeballing each one.
+The light-mode base teal meets WCAG AA contrast on the page background. If you ever pick a new brand color, keep that bar and generate the seven shades together (the Docusaurus docs point to [ColorBox](https://www.colorbox.io) for this) rather than eyeballing each one.
 
 Infima derives the rest of the palette from these. Status colors (`--ifm-color-success`, `-info`, `-warning`, `-danger`) and the neutral grays come from Infima's defaults and don't need overriding unless a plugin's UI calls for it.
 
 ### One accent, everywhere
 
-The primary green is the only brand accent. Anything with a brand color references the same hex, so the site reads as one design rather than three:
+The primary teal is the main brand accent. The surrounding navy and mint shades come from the same logo palette:
 
-- Theme links, buttons, and active states — `--ifm-color-primary` (`#2e8555`).
-- Logo tile (`static/img/logo.svg`) — `#2e8555`.
-- Announcement banner background (`docusaurus.config.ts`) — `#2e8555`.
+- Theme links, buttons, and active states use `--ifm-color-primary`.
+- The navbar and favicon use `static/img/docusaurus-plugins.png`.
+- The announcement banner uses the logo's muted blue.
 
 If the brand color ever changes, update all three together. A stray second accent (an old blue in the logo, a different banner color) is the fastest way to make the site look unfinished.
 
 ### Code line highlighting
 
-| Token | Light | Dark |
-| --- | --- | --- |
+| Token                                   | Light                | Dark                 |
+| --------------------------------------- | -------------------- | -------------------- |
 | `--docusaurus-highlighted-code-line-bg` | `rgba(0, 0, 0, 0.1)` | `rgba(0, 0, 0, 0.3)` |
 
 Used to highlight specific lines in a code block. Dark mode runs a heavier alpha so the band stays visible on the dark code background.
@@ -97,7 +97,7 @@ The visual brand has a writing counterpart. Docs here follow the same rules as t
 
 ## Emulation vs differentiation
 
-This site deliberately stays close to the stock Docusaurus look. That's a design decision, not an accident: the docs should feel native to the ecosystem so they sit naturally beside the official ones. But "looks like a Docusaurus site" must never tip into "looks like *the* Docusaurus project." The first is good craft. The second is passing off, and it breaks trust the moment a reader notices.
+This site deliberately stays close to the stock Docusaurus look. That's a design decision, not an accident: the docs should feel native to the ecosystem so they sit naturally beside the official ones. But "looks like a Docusaurus site" must never tip into "looks like _the_ Docusaurus project." The first is good craft. The second is passing off, and it breaks trust the moment a reader notices.
 
 The rule that keeps us on the right side of the line: **emulate the platform, own the identity.** Infima's bones are shared infrastructure that every Docusaurus site uses. The name and the affiliation claim are ours to get right.
 
@@ -111,7 +111,7 @@ The rule that keeps us on the right side of the line: **emulate the platform, ow
 **Must stay ours (the identity layer):**
 
 - **Site title, tagline, and favicon.** The navbar name and browser tab say this project, not "Docusaurus."
-- **No official logo or mascot.** Don't ship the Docusaurus wordmark, its logo, or Slash the dino. There's no published brand license granting reuse (the `docusaurus.io/brand` page 404s), so treat logo reuse as a no.
+- **Use the project's own mascot.** Don't substitute the Docusaurus wordmark, its logo, or Slash the dino.
 
 ### The affiliation disclaimer is load-bearing
 
@@ -121,7 +121,7 @@ Put a clear line in the footer (and ideally the homepage):
 
 > An independent, community-maintained collection of Docusaurus plugins. Not affiliated with or endorsed by the Docusaurus project or Meta.
 
-The test for any future change: *would a Docusaurus maintainer see this and think we're claiming to be them?* Sharing a framework — no. Wearing their brand with no disclaimer — yes. As long as the name is ours and the disclaimer is visible, staying close to the default is fair game.
+The test for any future change: _would a Docusaurus maintainer see this and think we're claiming to be them?_ Sharing a framework — no. Wearing their brand with no disclaimer — yes. As long as the name is ours and the disclaimer is visible, staying close to the default is fair game.
 
 ## Customizing
 
