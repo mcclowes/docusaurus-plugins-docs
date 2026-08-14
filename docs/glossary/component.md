@@ -37,11 +37,15 @@ We use <GlossaryTerm term="REST" definition="Representational State Transfer" />
 
 ## Props
 
-| Prop         | Required | Description                                      |
-| ------------ | -------- | ------------------------------------------------ |
-| `term`       | yes      | Lookup key matching an entry in `glossary.json`. |
-| `definition` | no       | Override the definition from the glossary file.  |
-| `children`   | no       | Custom display text. Defaults to `term`.         |
+| Prop                | Required | Description                                                                                   |
+| ------------------- | -------- | --------------------------------------------------------------------------------------------- |
+| `term`              | yes      | Lookup key matching an entry in `glossary.json`.                                              |
+| `definition`        | no       | Override the definition from the glossary file.                                               |
+| `abbreviation`      | no       | Override the long-form expansion shown in the tooltip.                                        |
+| `id`                | no       | Override the glossary entry anchor. Defaults to the configured ID or one derived from `term`. |
+| `routePath`         | no       | Override the glossary page route. Defaults to the configured route or `/glossary`.            |
+| `documentationPath` | no       | Link to an internal documentation page instead of the glossary entry.                         |
+| `children`          | no       | Custom display text. Defaults to `term`.                                                      |
 
 ## When to use it manually
 

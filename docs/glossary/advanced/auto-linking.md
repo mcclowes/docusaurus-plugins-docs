@@ -9,7 +9,7 @@ The plugin uses a **hybrid build-time + runtime** approach.
 
 ## Build time — the remark plugin
 
-At build time, the remark plugin (`src/remark/glossary-terms.js` in the source) walks your markdown AST and:
+At build time, the remark plugin (`src/remark/glossary-terms.ts` in the source) walks your markdown AST and:
 
 1. Scans text nodes for glossary terms (case-insensitive, whole-word)
 2. Replaces matches with `<GlossaryTerm term="…">match</GlossaryTerm>` JSX
@@ -107,9 +107,11 @@ The <GlossaryTerm term="PSP">Payment Service Provider (PSP)</GlossaryTerm> charg
 - **`autoLink: false` is respected.** Opting a term out of auto-linking also opts it out of expansion.
 - **Case-insensitive.** A lowercase canonical mention (e.g. `psp`) still triggers expansion, rendering `Payment Service Provider (psp)`.
 
-## Runtime — client modules
+## Runtime - the theme component
 
-The plugin registers a client module via `getClientModules()` so the tooltip/initialization logic runs on every route without you having to import anything.
+The generated MDX renders the `GlossaryTerm` React component. The component handles links,
+tooltips, focus behavior, and viewport-aware tooltip placement. No client module or separate
+initialization step is involved.
 
 ## Theme integration
 
