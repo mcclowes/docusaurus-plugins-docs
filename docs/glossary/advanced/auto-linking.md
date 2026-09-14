@@ -31,14 +31,14 @@ Our <GlossaryTerm term="API">API</GlossaryTerm> uses <GlossaryTerm term="REST">R
 
 ### What gets matched
 
-- Whole words only (respects word boundaries)
+- Whole words only. The unreleased Unicode fix also treats accented letters, non-Latin letters, numbers, and combining marks as word characters.
 - Case-insensitive lookups
 - Plural forms are handled — `API` matches `APIs`
 
 ### What gets skipped
 
 - Text inside fenced code blocks or inline `code`
-- Text inside existing `[links](…)`
+- Text inside existing `[links](…)`. The unreleased nested-link fix also skips formatted text inside links and reference links.
 - Text inside existing MDX components
 - Partial-word matches
 
@@ -106,6 +106,20 @@ The <GlossaryTerm term="PSP">Payment Service Provider (PSP)</GlossaryTerm> charg
 - **Author wins.** If the long form already appears immediately before the term (e.g. you wrote `Payment Service Provider (PSP)` yourself), expansion is skipped to avoid duplication.
 - **`autoLink: false` is respected.** Opting a term out of auto-linking also opts it out of expansion.
 - **Case-insensitive.** A lowercase canonical mention (e.g. `psp`) still triggers expansion, rendering `Payment Service Provider (psp)`.
+
+## Linking only the first occurrence
+
+The unreleased `linkOnlyFirstOccurrence` option defaults to `false`. Set it to
+`true` in the preset's `glossary` options, `getRemarkPlugin` options, or the remark
+plugin options to link each term once per file.
+
+Canonical names, aliases, and plurals share one occurrence. If `API` has the alias
+`interface`, then `API`, `APIs`, and `interface` together get one link. Headings,
+existing links, code, and MDX components don't consume the first occurrence.
+
+This works with `expandAcronymsOnFirstUse`: the first canonical occurrence gets
+both the expansion and the link. If an alias or plural appears first, it gets
+the link without expansion, and later canonical occurrences stay plain text.
 
 ## Runtime - the theme component
 

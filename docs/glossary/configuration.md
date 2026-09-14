@@ -11,7 +11,13 @@ title: Configuration
 | -------------------------- | --------- | -------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `glossaryPath`             | `string`  | `'glossary/glossary.json'` | Path to the glossary JSON, relative to the site root.                                                                                                                      |
 | `routePath`                | `string`  | `'/glossary'`              | URL where the glossary page is served.                                                                                                                                     |
+| `generatePage`             | `boolean` | `true`                     | Register a standalone page. Set to `false` to embed the glossary in a doc.                                                                                                 |
+| `id`                       | `string`  | `'default'`                | Plugin instance ID, used to select data when a site has multiple glossaries.                                                                                               |
+| `linkOnlyFirstOccurrence`  | `boolean` | `false`                    | Link each canonical term once per file, including aliases and plurals.                                                                                                     |
 | `expandAcronymsOnFirstUse` | `boolean` | `false`                    | When `true`, rewrite the first canonical occurrence of any term with an `abbreviation` to `Long Form (Term)`. See [auto-linking](advanced/auto-linking.md) for full rules. |
+
+`generatePage`, `linkOnlyFirstOccurrence`, and category badges are unreleased. See
+[embedding a glossary](component.md#embedding-a-glossary-in-a-doc) for docs sidebar support.
 
 ## Glossary JSON schema
 
@@ -25,6 +31,7 @@ type GlossaryFile = {
 type Term = {
   term: string; // required
   definition: string; // required
+  category?: string; // non-empty label shown beside the term and included in search
   abbreviation?: string; // full form, if `term` is an acronym
   relatedTerms?: string[]; // links to other entries by `term`
   id?: string; // explicit ID; auto-derived from `term` otherwise
@@ -56,6 +63,7 @@ term's destination from the glossary entry to the specified internal page, while
   "terms": [
     {
       "term": "API",
+      "category": "Plugins & APIs",
       "abbreviation": "Application Programming Interface",
       "definition": "A set of rules and protocols that allows different software applications to communicate with each other.",
       "relatedTerms": ["REST", "GraphQL", "Webhook"],
