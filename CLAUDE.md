@@ -4,7 +4,7 @@ Guidance for Claude Code when working in this repository.
 
 ## Project
 
-`docusaurus-plugins-docs` — a Docusaurus v3 documentation site for a family of Docusaurus plugins. The site installs and demos most plugins it documents, so docs and live behaviour stay in sync. Exceptions (`starter`, `marginalia`) are called out below.
+`docusaurus-plugins-docs` — a Docusaurus v3 documentation site for a family of Docusaurus plugins. The site installs and demos most plugins it documents, so docs and live behaviour stay in sync. Exceptions (`starter`, `marginalia`, `share-selection`) are called out below.
 
 - Entry: `docusaurus.config.ts`
 - Content: `docs/` (per-plugin nested structure), `blog/`, `src/pages/`
@@ -24,6 +24,7 @@ Each is a standalone npm package (not a workspace). Most install from the npm re
 | —                     | `docusaurus-plugin-mcp`            | `/docs/mcp/*`            |
 | —                     | `docusaurus-plugin-new-post-toast` | `/docs/new-post-toast/*` |
 | —                     | `docusaurus-plugin-omg`            | `/docs/omg/*`            |
+| —                     | `docusaurus-plugin-share-selection` | `/docs/share-selection/*` |
 | —                     | `docusaurus-plugin-starter`        | `/docs/starter/*`        |
 | —                     | `docusaurus-plugin-statuspage`     | `/docs/statuspage/*`     |
 
@@ -72,6 +73,8 @@ Root fixes belong in the plugin repos. If a plugin publishes a release with the 
 `docusaurus-plugin-starter` is intentionally **not** registered in `docusaurus.config.ts`. It's a template for building new plugins, not a library — its demo route has SSR issues when consumed from a sibling site because it's meant to be forked.
 
 `docusaurus-plugin-marginalia` is currently **documented but not installed**. The plugin exists as a sibling repo (`~/Development/docusaurus/docusaurus-plugin-marginalia`) but isn't yet published to npm. Its docs (`docs/marginalia/*`) and sidebar entry are in place so the install step is a small PR away; don't remove them. Once published, add it to `package.json` and register it in `docusaurus.config.ts` alongside the other plugins.
+
+`docusaurus-plugin-share-selection` is also **documented but not installed** until it's published to npm. Once it is, add it to `package.json` and register it in `docusaurus.config.ts`.
 
 `docusaurus-plugin-mcp` is registered in `docusaurus.config.ts` and indexes these docs into `build/mcp/snapshot.json` at build time (no visible UI — it has no client-side render). `routeBasePath: '/docs'` is set so generated page URLs match where docs are served. Serve the snapshot locally with `npm run mcp` (reads `build/mcp/snapshot.json` on `:3100`) and point an agent at `http://localhost:3100/mcp`. `npm run mcp:api` is a second demo that also indexes the OMG-generated `static/api/todo.yaml` via the CLI's `--openapi` flag. That spec is **not** wired into the plugin config: it's a build artifact (not git-tracked), and `buildOpenApi` throws on a missing file, so indexing it in-config would break clean builds.
 

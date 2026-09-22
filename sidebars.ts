@@ -125,6 +125,12 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
+      label: 'Share selection',
+      link: { type: 'doc', id: 'share-selection/overview' },
+      items: ['share-selection/getting-started', 'share-selection/configuration'],
+    },
+    {
+      type: 'category',
       label: 'Starter',
       link: { type: 'doc', id: 'starter/overview' },
       items: [
