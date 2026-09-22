@@ -100,6 +100,9 @@ const config: Config = {
       },
     ],
 
+    // Highlight 3+ words to get a Copy / Ask AI / Share palette with deep links.
+    'docusaurus-plugin-share-selection',
+
     // Indexes these docs into build/mcp/snapshot.json at build time. Serve it
     // locally with `npm run mcp` and point an agent at http://localhost:3100/mcp
     // to search the plugin docs. routeBasePath matches where docs are served
@@ -158,6 +161,7 @@ const config: Config = {
             { label: 'New post toast', to: '/docs/new-post-toast/overview' },
             { label: 'Open with LLM', to: '/docs/open-with-llm/overview' },
             { label: 'omg', to: '/docs/omg/overview' },
+            { label: 'Share selection', to: '/docs/share-selection/overview' },
             {
               label: 'Speccy',
               href: 'https://github.com/mcclowes/speccy/blob/main/apps/docusaurus-demo/docs/docusaurus.md',
