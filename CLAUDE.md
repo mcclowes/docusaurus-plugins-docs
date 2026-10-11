@@ -4,7 +4,7 @@ Guidance for Claude Code when working in this repository.
 
 ## Project
 
-`docusaurus-plugins-docs` — a Docusaurus v3 documentation site for a family of Docusaurus plugins. The site installs and demos most plugins it documents, so docs and live behaviour stay in sync. Exceptions (`starter`, `marginalia`) are called out below.
+`docusaurus-plugins-docs` is a Docusaurus v3 documentation site for a family of Docusaurus plugins. The site installs and demos several plugins it documents. Embeds, Marginalia, Open with LLM, Speccy, and Starter aren't registered here. Their guides explain how to use them on your own site.
 
 - Entry: `docusaurus.config.ts`
 - Content: `docs/` (per-plugin nested structure), `blog/`, `src/pages/`
@@ -15,18 +15,21 @@ Guidance for Claude Code when working in this repository.
 
 Each is a standalone npm package (not a workspace). Most install from the npm registry; `new-post-toast` and `starter` install from local tarballs in `vendor/` (see `package.json` — `file:./vendor/*.tgz`) because the published versions need the workarounds documented below:
 
-| Directory (this repo) | Package                            | Docs route               |
-| --------------------- | ---------------------------------- | ------------------------ |
-| —                     | `docusaurus-plugin-banner`         | `/docs/banner/*`         |
-| —                     | `docusaurus-plugin-cookie-consent` | `/docs/cookie-consent/*` |
-| —                     | `docusaurus-plugin-glossary`       | `/docs/glossary/*`       |
-| —                     | `docusaurus-plugin-marginalia`     | `/docs/marginalia/*`     |
-| —                     | `docusaurus-plugin-mcp`            | `/docs/mcp/*`            |
-| —                     | `docusaurus-plugin-new-post-toast` | `/docs/new-post-toast/*` |
-| —                     | `docusaurus-plugin-omg`            | `/docs/omg/*`            |
+| Directory (this repo) | Package                             | Docs route                |
+| --------------------- | ----------------------------------- | ------------------------- |
+| —                     | `docusaurus-plugin-banner`          | `/docs/banner/*`          |
+| —                     | `docusaurus-plugin-cookie-consent`  | `/docs/cookie-consent/*`  |
+| —                     | `docusaurus-plugin-embeds`          | `/docs/embeds/*`          |
+| —                     | `docusaurus-plugin-glossary`        | `/docs/glossary/*`        |
+| —                     | `docusaurus-plugin-marginalia`      | `/docs/marginalia/*`      |
+| —                     | `docusaurus-plugin-mcp`             | `/docs/mcp/*`             |
+| —                     | `docusaurus-plugin-new-post-toast`  | `/docs/new-post-toast/*`  |
+| —                     | `docusaurus-plugin-open-with-llm`   | `/docs/open-with-llm/*`   |
+| —                     | `docusaurus-plugin-omg`             | `/docs/omg/*`             |
 | —                     | `docusaurus-plugin-share-selection` | `/docs/share-selection/*` |
-| —                     | `docusaurus-plugin-starter`        | `/docs/starter/*`        |
-| —                     | `docusaurus-plugin-statuspage`     | `/docs/statuspage/*`     |
+| —                     | `docusaurus-plugin-speccy`          | External Speccy guide     |
+| —                     | `docusaurus-plugin-starter`         | `/docs/starter/*`         |
+| —                     | `docusaurus-plugin-statuspage`      | `/docs/statuspage/*`      |
 
 The source of each plugin lives in its own sibling repo under `~/Development/docusaurus/`. **Do not** introduce a monorepo or workspace spanning them — they are maintained as independent repos and that boundary is load-bearing.
 

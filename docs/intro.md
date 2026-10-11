@@ -7,7 +7,7 @@ sidebar_position: 1
 
 # Docusaurus plugins
 
-This site documents — and dogfoods — a family of Docusaurus v3 plugins. Every plugin you read about here is also installed and configured in the site you're reading it on, so each page is itself an example of the plugin in action.
+This site documents a family of Docusaurus v3 plugins and runs several as live demos. Embeds, Marginalia, Open with LLM, Speccy, and Starter aren't live demos on this site. Their guides explain how to use them on your own site.
 
 ## The plugins
 
