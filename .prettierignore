@@ -2,3 +2,4 @@ node_modules
 build
 .docusaurus
 package-lock.json
+.claude/
