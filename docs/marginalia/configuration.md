@@ -10,8 +10,8 @@ components.
 
 ## Plugin options
 
-| Option    | Type      | Default | Description                                |
-| --------- | --------- | ------- | ------------------------------------------ |
+| Option    | Type      | Default | Description                                           |
+| --------- | --------- | ------- | ----------------------------------------------------- |
 | `enabled` | `boolean` | `true`  | Toggle the plugin without removing it from `plugins`. |
 
 ## `<Marginalia>`

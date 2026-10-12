@@ -5,16 +5,16 @@ title: Configuration
 
 # Configuration
 
-| Option                            | Type                       | Default              | Description                                                              |
-| --------------------------------- | -------------------------- | -------------------- | ------------------------------------------------------------------------ |
-| `server.name` / `server.version` | `string`                   | site title / `0.0.0` | Identity reported to MCP clients.                                        |
-| `instructions`                    | `string`                   | —                    | One-line steer shown to the model on connect.                            |
-| `docsDir`                         | `string`                   | `docs`               | Docs source dir, relative to the site.                                   |
-| `routeBasePath`                   | `string`                   | `/`                  | Route base path your docs are served under. Used to build real page URLs. |
-| `openapi`                         | `{ name, spec }[]`         | `[]`                 | Specs to index. `spec` is a JSON or YAML path relative to the site. See [OpenAPI](./advanced/openapi.md). |
-| `exclude`                         | `string[]`                 | `[]`                 | Substrings; any source-relative doc path containing one is skipped.      |
-| `outputDir`                       | `string`                   | `mcp`                | Snapshot location, relative to the build `outDir`.                       |
-| `endpoint`                        | `string`                   | `/mcp`               | Default endpoint path for the CLI server.                                |
+| Option                           | Type               | Default              | Description                                                                                               |
+| -------------------------------- | ------------------ | -------------------- | --------------------------------------------------------------------------------------------------------- |
+| `server.name` / `server.version` | `string`           | site title / `0.0.0` | Identity reported to MCP clients.                                                                         |
+| `instructions`                   | `string`           | —                    | One-line steer shown to the model on connect.                                                             |
+| `docsDir`                        | `string`           | `docs`               | Docs source dir, relative to the site.                                                                    |
+| `routeBasePath`                  | `string`           | `/`                  | Route base path your docs are served under. Used to build real page URLs.                                 |
+| `openapi`                        | `{ name, spec }[]` | `[]`                 | Specs to index. `spec` is a JSON or YAML path relative to the site. See [OpenAPI](./advanced/openapi.md). |
+| `exclude`                        | `string[]`         | `[]`                 | Substrings; any source-relative doc path containing one is skipped.                                       |
+| `outputDir`                      | `string`           | `mcp`                | Snapshot location, relative to the build `outDir`.                                                        |
+| `endpoint`                       | `string`           | `/mcp`               | Default endpoint path for the CLI server.                                                                 |
 
 ## Examples
 
