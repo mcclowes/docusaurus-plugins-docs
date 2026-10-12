@@ -11,7 +11,11 @@ const config: Config = {
   organizationName: 'mcclowes',
   projectName: 'docusaurus-plugins-docs',
   onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
 
   i18n: { defaultLocale: 'en', locales: ['en'] },
 
