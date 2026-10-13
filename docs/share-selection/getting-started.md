@@ -23,6 +23,16 @@ That's enough. Highlight three or more words on a docs page, blog post, or MDX p
 
 Selections inside code blocks are ignored, because code blocks already have a copy button.
 
+## Use the keyboard
+
+:::note Upcoming release
+The shortcut below requires the upcoming keyboard-access release of the plugin.
+:::
+
+Select a passage with Shift and the arrow keys using your browser's caret browsing mode. When the palette appears, press **Alt+Shift+S** (**Option+Shift+S** on macOS) to focus its first action.
+
+Use **Tab** to move between actions and **Enter** to activate one. **Escape** closes the palette and returns focus to the selected passage, so you can continue reading.
+
 ## Try the deep link
 
 Copy a passage, then open the link from the clipboard in a new tab. The page scrolls to the passage and highlights it.
