@@ -23,6 +23,10 @@ That's enough. Highlight three or more words on a docs page, blog post, or MDX p
 
 Selections inside code blocks are ignored, because code blocks already have a copy button.
 
+## Try the example site
+
+The repository includes a [Docusaurus example site](https://github.com/mcclowes/docusaurus-plugin-share-selection/tree/main/examples/docusaurus-v3). Follow the [development instructions](https://github.com/mcclowes/docusaurus-plugin-share-selection#development) to install and run it locally.
+
 ## Use the keyboard
 
 :::note Upcoming release
