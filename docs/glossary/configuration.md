@@ -19,6 +19,10 @@ title: Configuration
 `generatePage`, `linkOnlyFirstOccurrence`, and category badges are unreleased. See
 [embedding a glossary](component.md#embedding-a-glossary-in-a-doc) for docs sidebar support.
 
+Manual `<GlossaryTerm>` links to glossary entries inherit the default plugin instance's `routePath`. A nonempty `routePath` prop overrides that route; when neither is available, the component uses `/glossary`.
+
+The configured-route fallback fix is unreleased. Pass `routePath` explicitly on manual terms until the fix is published.
+
 ## Glossary JSON schema
 
 ```ts
