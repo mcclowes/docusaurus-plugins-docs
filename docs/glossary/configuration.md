@@ -23,6 +23,12 @@ Manual `<GlossaryTerm>` links to glossary entries inherit the default plugin ins
 
 The configured-route fallback fix is unreleased. Pass `routePath` explicitly on manual terms until the fix is published.
 
+## Anchor validation
+
+Standalone and embedded glossaries register their rendered term IDs and letter-navigation IDs with Docusaurus. Valid links to these anchors pass a build with `onBrokenAnchors: 'throw'`, including sites hosted under a base URL such as `/sub/`. Missing anchors still fail validation.
+
+The anchor-registration fix is unreleased and raises the minimum supported Docusaurus version from 3.0 to 3.1, which introduced the anchor collector API. Published versions may report valid glossary-entry anchors as broken.
+
 ## Glossary JSON schema
 
 ```ts

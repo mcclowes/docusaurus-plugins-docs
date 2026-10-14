@@ -32,7 +32,8 @@ Full runnable example site at [`examples/docusaurus-v3/`](https://github.com/mcc
 
 ## Compatibility
 
-- Docusaurus `^3.0.0` with MDX v3
+- Published versions support Docusaurus `^3.0.0` with MDX v3.
+- The unreleased anchor-registration fix requires Docusaurus `^3.1.0`.
 - React `^18` or `^19`
 - Node.js 20 or newer
 
