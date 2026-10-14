@@ -24,9 +24,11 @@ Toast notifications for returning visitors when new blog posts have been publish
 
 ## Compatibility
 
-- Docusaurus `^3.0.0`
-- React `^18`
-- The default Docusaurus blog plugin (or custom instances configured via `blog.pluginId`)
+| Plugin version | Docusaurus                       | React |
+| -------------- | -------------------------------- | ----- |
+| `0.2.x`        | `^3.0.0` (tested up to `3.10.1`) | `^18` |
+
+Also requires the default Docusaurus blog plugin (or custom instances configured via `blog.pluginId`).
 
 ## Real-world example
 

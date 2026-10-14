@@ -31,6 +31,8 @@ Full runnable example site at [`examples/docusaurus-v3/`](https://github.com/mcc
 
 ## Compatibility
 
-- Docusaurus `^3.0.0`
-- React `^18`
-- A public Statuspage.io URL that exposes `/api/v2/summary.json`
+| Plugin version | Docusaurus                       | React |
+| -------------- | -------------------------------- | ----- |
+| `0.2.x`        | `^3.0.0` (tested up to `3.10.1`) | `^18` |
+
+Also requires a public Statuspage.io URL that exposes `/api/v2/summary.json`.

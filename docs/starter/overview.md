@@ -39,3 +39,9 @@ Full example sites and client snippets at [`examples/`](https://github.com/mcclo
 
 - `docusaurus-v3/` — the consuming example site
 - `client-conditional-loading.ts`, `client-dom-manipulation.ts`, `client-event-listeners.ts`, `client-external-library.ts` — four patterns for client-side plugin behavior
+
+## Compatibility
+
+| Plugin version | Docusaurus                       | React |
+| -------------- | -------------------------------- | ----- |
+| `0.2.x`        | `^3.0.0` (tested up to `3.10.1`) | `^18` |

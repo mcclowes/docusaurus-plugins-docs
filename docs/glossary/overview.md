@@ -30,8 +30,9 @@ Full runnable example site at [`examples/docusaurus-v3/`](https://github.com/mcc
 
 ## Compatibility
 
-- Docusaurus `^3.0.0` with MDX v3
-- React `^18`
+| Plugin version | Docusaurus                                | React                |
+| -------------- | ----------------------------------------- | -------------------- |
+| `3.3.x`        | `^3.0.0` (MDX v3, tested up to `3.10.1`)  | `^18.0.0 || ^19.0.0` |
 
 ## Exports
 

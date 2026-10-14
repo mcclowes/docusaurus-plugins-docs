@@ -27,5 +27,6 @@ collapse gracefully on narrow viewports.
 
 ## Compatibility
 
-- Docusaurus `^3.0.0`
-- React `^18`
+| Plugin version | Docusaurus                       | React |
+| -------------- | -------------------------------- | ----- |
+| `0.1.x`        | `^3.0.0` (tested up to `3.10.1`) | `^18` |

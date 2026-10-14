@@ -32,6 +32,8 @@ The plugin ships a full runnable example site at [`examples/docusaurus-v3/`](htt
 
 ## Compatibility
 
-- Docusaurus `^3.0.0`
-- React `^18`
-- Requires `localStorage` (all modern browsers)
+| Plugin version | Docusaurus                       | React |
+| -------------- | -------------------------------- | ----- |
+| `0.4.x`        | `^3.0.0` (tested up to `3.10.1`) | `^18` |
+
+Also requires `localStorage` (all modern browsers).

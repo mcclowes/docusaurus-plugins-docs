@@ -32,6 +32,14 @@ This site uses the plugin to compile a tiny todo API from `api/todo/api.omg.md`.
 
 The source files live in [`api/todo/`](https://github.com/mcclowes/docusaurus-plugins-docs/tree/main/api/todo) of this repo.
 
+## Compatibility
+
+| Plugin version | Docusaurus                       |
+| -------------- | -------------------------------- |
+| `0.1.x`        | `^3.5.0` (tested up to `3.10.1`) |
+
+`@docusaurus/core: ^3.5.0` is pinned because the plugin uses APIs introduced in 3.5. Build-time only — no React peer.
+
 ## Next
 
 - [Getting started](./getting-started.md) — install + minimum config

@@ -35,8 +35,9 @@ The plugin ships a sample site plus four client-integration snippets at [`exampl
 
 ## Compatibility
 
-- Docusaurus `^3.0.0`
-- React `^18.2.0`
+| Plugin version | Docusaurus                       | React     |
+| -------------- | -------------------------------- | --------- |
+| `4.5.x`        | `^3.0.0` (tested up to `3.10.1`) | `^18.2.0` |
 
 ## What this plugin is **not**
 
