@@ -27,7 +27,7 @@ Three conventional folders:
 
 ## Endpoint anatomy
 
-```md title="endpoints/list-todos.omg.md"
+````md title="endpoints/list-todos.omg.md"
 ---
 method: GET
 path: /todos
@@ -53,7 +53,7 @@ Returns all todos, optionally filtered by completion status.
   completed: boolean
 }]
 ```
-```
+````
 
 A few things to notice:
 

@@ -19,15 +19,15 @@ Add the plugin to `docusaurus.config.ts` (or `.js`) with one or more `apis` entr
 
 ```ts
 // docusaurus.config.ts
-import type { PluginOmgOptions } from 'docusaurus-plugin-omg'
+import type { PluginOmgOptions } from 'docusaurus-plugin-omg';
 
 const omgOptions: PluginOmgOptions = {
   apis: [{ id: 'todo', input: 'api/todo/api.omg.md' }],
-}
+};
 
 export default {
   plugins: [['docusaurus-plugin-omg', omgOptions]],
-}
+};
 ```
 
 After `docusaurus build` (or `docusaurus start`) the compiled spec lands at `static/api/todo.yaml` and is served at `/api/todo.yaml` at runtime.
@@ -50,7 +50,7 @@ A tiny demo API.
 
 Add an endpoint at `api/todo/endpoints/list-todos.omg.md`:
 
-```md title="api/todo/endpoints/list-todos.omg.md"
+````md title="api/todo/endpoints/list-todos.omg.md"
 ---
 method: GET
 path: /todos
@@ -69,6 +69,7 @@ Returns all todos.
   completed: boolean
 }]
 ```
+````
 
 Run `npm start` — the plugin compiles on the fly, and `/api/todo.yaml` updates as you save.
 

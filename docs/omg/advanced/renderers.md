@@ -81,7 +81,7 @@ If you just want a single embeddable page without another plugin, drop a Swagger
         SwaggerUIBundle({
           url: '/api/todo.yaml',
           dom_id: '#swagger-ui',
-        })
+        });
     </script>
   </body>
 </html>

@@ -33,7 +33,7 @@ import { Marginalia, Aside, Endpoint } from '@theme/Marginalia';
 
 <Marginalia>
 
-The concept of <Aside anchor="pattern languages" kind="concept" title="Christopher Alexander" meta={["1977", "253 patterns"]}>*A Pattern Language* catalogued 253 design patterns for towns and buildings.</Aside> has shaped software thinking.
+The concept of <Aside anchor="pattern languages" kind="concept" title="Christopher Alexander" meta={["1977", "253 patterns"]}>_A Pattern Language_ catalogued 253 design patterns for towns and buildings.</Aside> has shaped software thinking.
 
 Request a session with <Endpoint method="POST" path="/sessions" />.
 
