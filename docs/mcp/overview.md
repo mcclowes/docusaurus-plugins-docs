@@ -26,13 +26,13 @@ Docusaurus sites usually deploy as static files, which can't serve a live endpoi
 
 The server exposes six read-only tools:
 
-| Tool                  | Description                                                              |
-| --------------------- | ------------------------------------------------------------------------ |
-| `search_docs`         | Full-text search the docs. Returns URL, title, category, snippet.        |
-| `read_doc`            | Full markdown of a page by URL.                                          |
-| `list_doc_categories` | Categories with page counts.                                             |
-| `list_apis`           | The indexed OpenAPI specs with versions and counts.                      |
-| `search_api`          | Search operations and webhook events by path, name, summary, or tag.     |
+| Tool                  | Description                                                                      |
+| --------------------- | -------------------------------------------------------------------------------- |
+| `search_docs`         | Full-text search the docs. Returns URL, title, category, snippet.                |
+| `read_doc`            | Full markdown of a page by URL.                                                  |
+| `list_doc_categories` | Categories with page counts.                                                     |
+| `list_apis`           | The indexed OpenAPI specs with versions and counts.                              |
+| `search_api`          | Search operations and webhook events by path, name, summary, or tag.             |
 | `get_endpoint`        | Full detail of one operation: params, request body, responses, `$ref`s resolved. |
 
 The three `*_api` tools only appear when you configure [`openapi`](./advanced/openapi.md). Everything is read-only.

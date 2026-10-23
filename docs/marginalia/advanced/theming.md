@@ -48,20 +48,20 @@ Wrap overrides in `[data-theme='dark']`:
 
 ## Variable reference
 
-| Variable                      | Maps to (default)               | Purpose                      |
-| ----------------------------- | ------------------------------- | ---------------------------- |
-| `--marginalia-accent`         | `--ifm-color-primary`           | Anchor underline, hot border |
-| `--marginalia-accent-soft`    | `--ifm-color-primary-lightest`  | `link` kind swatch           |
-| `--marginalia-accent-strong`  | `--ifm-color-primary-darker`    | `code` swatch, PUT/PATCH chip |
-| `--marginalia-danger`         | `--ifm-color-danger`            | `warning` / `endpoint` swatch |
-| `--marginalia-surface`        | `--ifm-card-background-color`   | Card + TOC background         |
-| `--marginalia-border`         | `--ifm-color-emphasis-300`      | Card border, dividers        |
-| `--marginalia-text`           | `--ifm-font-color-base`         | Body text inside cards       |
-| `--marginalia-heading`        | `--ifm-heading-color`           | Card titles                  |
-| `--marginalia-muted`          | `--ifm-color-emphasis-700`      | Kind labels, muted copy      |
-| `--marginalia-font-mono`      | `--ifm-font-family-monospace`   | Kind labels, pills, endpoint |
-| `--marginalia-font-serif`     | `--ifm-font-family-base`        | Card titles                  |
-| `--marginalia-navbar-offset`  | `--ifm-navbar-height`           | Sticky TOC offset            |
+| Variable                     | Maps to (default)              | Purpose                       |
+| ---------------------------- | ------------------------------ | ----------------------------- |
+| `--marginalia-accent`        | `--ifm-color-primary`          | Anchor underline, hot border  |
+| `--marginalia-accent-soft`   | `--ifm-color-primary-lightest` | `link` kind swatch            |
+| `--marginalia-accent-strong` | `--ifm-color-primary-darker`   | `code` swatch, PUT/PATCH chip |
+| `--marginalia-danger`        | `--ifm-color-danger`           | `warning` / `endpoint` swatch |
+| `--marginalia-surface`       | `--ifm-card-background-color`  | Card + TOC background         |
+| `--marginalia-border`        | `--ifm-color-emphasis-300`     | Card border, dividers         |
+| `--marginalia-text`          | `--ifm-font-color-base`        | Body text inside cards        |
+| `--marginalia-heading`       | `--ifm-heading-color`          | Card titles                   |
+| `--marginalia-muted`         | `--ifm-color-emphasis-700`     | Kind labels, muted copy       |
+| `--marginalia-font-mono`     | `--ifm-font-family-monospace`  | Kind labels, pills, endpoint  |
+| `--marginalia-font-serif`    | `--ifm-font-family-base`       | Card titles                   |
+| `--marginalia-navbar-offset` | `--ifm-navbar-height`          | Sticky TOC offset             |
 
 ## Swizzling
 
