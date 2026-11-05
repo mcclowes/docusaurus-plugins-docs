@@ -14,6 +14,7 @@ Highlight text on a page and a small palette appears above it. Readers can copy 
 - Links combine the nearest heading anchor with a text fragment (`#setup:~:text=...`), so the reader lands on the passage with it highlighted. Browsers without text fragment support still land on the heading.
 - **Ask AI** sends the passage along with its heading path and the text around it, so the model knows what the reader means.
 - Custom actions turn a selection into any URL, such as a pre-filled "Report an issue with this passage" form.
+- The upcoming release adds [keyboard access](./getting-started.md#use-the-keyboard): **Alt+Shift+S** focuses the palette, and **Escape** returns to the selected passage.
 
 ## How it works
 

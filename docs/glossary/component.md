@@ -49,6 +49,10 @@ We use <GlossaryTerm term="REST" definition="Representational State Transfer" />
 
 ## When to use it manually
 
+Omitting `routePath` uses the default glossary plugin instance's configured route. For example, with plugin `routePath: '/terms'` and a term ID of `api`, `<GlossaryTerm term="API" />` links to `/terms#api`. An explicit `routePath="/glossary"` still overrides that configuration. `documentationPath` or the term's `documentation.path` takes precedence over glossary-entry links.
+
+This fallback fix is unreleased. Until it is published, pass `routePath` explicitly when using a custom glossary route.
+
 - The auto-linker won't touch terms inside code blocks, existing links, or existing MDX components — use the component manually if you want those matched
 - When you need a one-off override of the term text or definition (e.g. localized phrasing) without editing `glossary.json`
 

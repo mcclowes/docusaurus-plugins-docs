@@ -11,6 +11,8 @@ title: Getting started
 npm install docusaurus-plugin-glossary
 ```
 
+The unreleased anchor-registration fix requires Docusaurus 3.1 or newer. See [anchor validation](configuration.md#anchor-validation) for the support change.
+
 ## Use the preset
 
 The easiest setup is to swap `@docusaurus/preset-classic` for the plugin's preset wrapper — it configures the classic preset **and** wires up the auto-linking remark plugin in one step:

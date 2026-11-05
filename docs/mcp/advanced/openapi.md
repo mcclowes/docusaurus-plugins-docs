@@ -24,10 +24,10 @@ Point the plugin at one or more OpenAPI specs and it indexes every operation and
 
 Configuring `openapi` adds three more tools to the server. Without it, they don't appear at all.
 
-| Tool           | Description                                                              |
-| -------------- | ------------------------------------------------------------------------ |
-| `list_apis`    | The indexed specs, with versions and operation counts.                   |
-| `search_api`   | Search operations and webhook events by path, name, summary, or tag.     |
+| Tool           | Description                                                                           |
+| -------------- | ------------------------------------------------------------------------------------- |
+| `list_apis`    | The indexed specs, with versions and operation counts.                                |
+| `search_api`   | Search operations and webhook events by path, name, summary, or tag.                  |
 | `get_endpoint` | Full detail of one operation: params, request body, responses, with `$ref`s resolved. |
 
 ## Why resolved schemas matter

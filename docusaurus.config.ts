@@ -11,7 +11,11 @@ const config: Config = {
   organizationName: 'mcclowes',
   projectName: 'docusaurus-plugins-docs',
   onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: 'warn',
+    },
+  },
 
   i18n: { defaultLocale: 'en', locales: ['en'] },
 
@@ -46,8 +50,7 @@ const config: Config = {
       'docusaurus-plugin-banner',
       {
         id: 'welcome',
-        content:
-          '🎉 You are looking at a site that uses every plugin documented here — try them out.',
+        content: '🎉 Explore the plugin docs and try the live demos on this site.',
         dismissible: true,
         backgroundColor: '#173a58',
         textColor: '#f4fffb',
